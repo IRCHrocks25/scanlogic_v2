@@ -1,0 +1,959 @@
+
+scanlogic v2.html
+
+Page
+1
+/
+1
+100%
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>SCANLogic™ — Veterinary Ultrasound Decision Systems</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --teal:#19748A;--teal-dk:#125f73;--teal-dp:#0e4d5f;
+  --mint:#A6F5C0;--navy:#0A2E4A;
+  --cyan:#B8FAFF;--ice:#E7F2F7;--ice-md:#d4e8f0;
+  --white:#ffffff;--off:#f4fbfd;--gray:#4a6070;
+}
+body{font-family:'Outfit',sans-serif;background:var(--off);color:var(--navy);overflow-x:hidden;line-height:1.75;font-weight:400}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:300;background:var(--navy);display:flex;align-items:center;justify-content:space-between;padding:0 80px;height:76px;border-bottom:2px solid var(--teal)}
+.logo-img{height:52px;width:auto;display:block}
+.ft-logo-img{height:60px;width:auto;display:block;opacity:0.85}
+.nav-links{display:flex;gap:32px;list-style:none;align-items:center}
+.nav-links a{text-decoration:none;color:rgba(255,255,255,0.5);font-size:13px;font-weight:400;letter-spacing:0.04em;transition:color .2s}
+.nav-links a:hover{color:var(--mint)}
+.nav-links .cta{background:var(--teal);color:#fff;padding:8px 20px;font-weight:600;border-radius:999px}
+.nav-links .cta:hover{background:var(--teal-dk);color:#fff}
+
+/* SHARED */
+.ey{font-size:13px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);background:#A7F5C0;padding:6px 16px;border-radius:6px;margin-bottom:16px;display:inline-block}
+.ey-lt{color:var(--teal)}
+.ey-mn{color:var(--teal)}
+h1,h2,h3{font-family:'Outfit',sans-serif;font-weight:600;line-height:1.05;letter-spacing:-0.02em}
+.it{font-style:italic;font-weight:300;color:var(--teal);display:block}
+.it-mn{color:var(--mint)}
+
+/* BUTTONS */
+.btn{display:inline-block;padding:13px 28px;font-size:13px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;text-decoration:none;border:2px solid transparent;transition:all .2s;cursor:pointer;border-radius:999px;white-space:nowrap}
+.btn-mint{background:var(--mint);color:var(--navy);border-color:var(--mint)}
+.btn-mint:hover{background:transparent;color:var(--mint)}
+.btn-omint{background:transparent;color:rgba(255,255,255,.75);border-color:rgba(255,255,255,.25)}
+.btn-omint:hover{border-color:var(--mint);color:var(--mint)}
+.btn-navy{background:var(--navy);color:#fff;border-color:var(--navy)}
+.btn-navy:hover{background:transparent;color:var(--navy)}
+.btn-onvy{background:transparent;color:var(--navy);border-color:var(--navy)}
+.btn-onvy:hover{background:var(--navy);color:#fff}
+.btn-white{background:#fff;color:var(--teal);border-color:#fff}
+.btn-white:hover{background:transparent;color:#fff}
+
+/* HERO */
+.hero{padding-top:76px;position:relative;min-height:80vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--navy)}
+.hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;display:block;z-index:0}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,46,74,.75) 0%,rgba(10,46,74,.65) 60%,rgba(10,46,74,.55) 100%);z-index:1}
+.hero-content{position:relative;z-index:2;max-width:1100px;padding:60px 52px;text-align:center;display:flex;flex-direction:column;align-items:center}
+.hero-content .ey-lt{margin-bottom:14px}
+.hero-content h1{font-size:76px;font-weight:700;color:#fff;margin-bottom:6px;line-height:1;white-space:nowrap}
+.hero-content h1 .sub{font-size:26px;font-weight:400;font-style:italic;color:var(--mint);display:block;margin-top:12px;margin-bottom:22px;line-height:1.5;letter-spacing:0}
+.hero-sh{font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--cyan);margin-bottom:18px;display:block}
+.hero-content p{font-size:18px;color:rgba(255,255,255,.9);line-height:1.9;margin-bottom:36px;font-weight:400;max-width:700px}
+.hero-btns{display:flex;flex-direction:row;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* CREDIBILITY */
+.cred-wrap{display:grid;grid-template-columns:1fr 1fr;background:var(--white);border-bottom:2px solid var(--ice-md)}
+.cred-l{border-right:2px solid var(--ice-md);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.cred-l-text{padding:80px 52px 32px}
+.cred-l-img{width:50%;height:auto;display:block;object-fit:contain;object-position:bottom left}
+.cred-l h2{font-size:48px;color:var(--navy);margin-bottom:14px}
+.cred-l h2 .it{font-size:34px;margin-top:4px}
+.cred-sub{font-size:18px;font-weight:500;color:var(--teal);margin-bottom:24px}
+.cred-close{font-size:18px;color:var(--gray);line-height:1.85;font-style:italic;font-weight:400;padding-top:22px;border-top:1px solid var(--ice-md)}
+.cred-r{padding:56px 80px;background:var(--off);display:flex;flex-direction:column;justify-content:center}
+.cred-items{display:flex;flex-direction:column;gap:10px}
+.cred-item{display:flex;align-items:flex-start;gap:16px;padding:16px 18px;background:var(--white);border-left:3px solid transparent;transition:border-color .2s,background .2s;border-radius:8px}
+.cred-item:hover{border-left-color:var(--teal);background:var(--ice)}
+.cn{font-size:13px;font-weight:700;color:var(--teal);letter-spacing:.1em;flex-shrink:0;padding-top:3px;min-width:28px}
+.ct{font-size:17px;font-weight:600;color:var(--navy);margin-bottom:5px;line-height:1.35}
+.cd{font-size:18px;font-weight:400;color:var(--gray);line-height:1.8}
+.badge{display:inline-flex;background:var(--teal);color:#fff;padding:3px 10px;font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-top:4px}
+
+/* STRIP */
+.strip{display:grid;grid-template-columns:1fr 1fr;background:var(--ice);border-bottom:2px solid var(--ice-md)}
+.strip-l{padding:22px 80px;border-right:2px solid var(--ice-md);display:flex;align-items:center;gap:24px}
+.sttag{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--teal)}
+.stsep{width:1px;height:20px;background:var(--ice-md);flex-shrink:0}
+.stsub{font-size:13px;color:var(--teal);font-weight:400}
+.strip-r{padding:22px 80px;display:flex;align-items:center;justify-content:flex-end;gap:36px}
+.st-n{font-size:22px;font-weight:700;color:var(--navy)}
+.st-d{font-size:11px;color:var(--teal);letter-spacing:.04em;font-weight:500}
+
+/* PITCH */
+.pitch{display:grid;grid-template-columns:1fr 390px;background:var(--white)}
+.pitch-l{padding:84px 80px;border-right:2px solid var(--ice)}
+.pitch-l h2{font-size:60px;color:var(--navy);margin-bottom:24px}
+.pitch-l h2 span{color:var(--teal)}
+.pitch-l p{font-size:15px;color:var(--gray);line-height:1.85;max-width:480px;margin-bottom:32px;font-weight:300}
+.pitch-btns{display:flex;gap:14px;flex-wrap:wrap}
+.pitch-r{background:var(--navy);padding:64px 80px;display:flex;flex-direction:column;justify-content:center}
+.pitch-r h3{font-size:28px;color:#fff;margin-bottom:16px}
+.pitch-r p{font-size:13px;color:rgba(255,255,255,.5);line-height:1.85;margin-bottom:24px;font-weight:300}
+.pitch-wave{width:100%;display:block;margin:14px 0 20px}
+.dots{display:flex;gap:8px;align-items:center}
+.dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.18)}
+.dot.on{background:var(--mint);width:24px;border-radius:4px}
+
+/* BLOCKS */
+.blocks{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.blk{padding:52px 64px;position:relative;overflow:hidden}
+.blk-teal{background:var(--teal)} .blk-navy{background:var(--navy)} .blk-ice{background:var(--ice)}
+.blk-ov{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:14px}
+.blk-teal .blk-ov{color:rgba(255,255,255,.6)} .blk-navy .blk-ov{color:var(--mint)} .blk-ice .blk-ov{color:var(--teal)}
+.blk h3{font-size:32px;margin-bottom:16px}
+.blk-teal h3{color:#fff} .blk-navy h3{color:#fff} .blk-ice h3{color:var(--navy)}
+.blk p{font-size:13px;line-height:1.8;margin-bottom:20px;font-weight:300}
+.blk-teal p{color:rgba(255,255,255,.72)} .blk-navy p{color:rgba(255,255,255,.52)} .blk-ice p{color:var(--gray)}
+.blk-ghost{position:absolute;bottom:-12px;right:-6px;font-size:128px;font-weight:900;line-height:1;pointer-events:none;user-select:none;opacity:.07;letter-spacing:-.05em}
+.blk-teal .blk-ghost,.blk-navy .blk-ghost{color:#fff} .blk-ice .blk-ghost{color:var(--teal)}
+.blk-note{font-size:12px;line-height:1.7;padding:12px 14px;margin-bottom:20px;border-left:2px solid;font-weight:300}
+.blk-teal .blk-note{background:rgba(255,255,255,.1);border-color:var(--mint);color:rgba(255,255,255,.75)}
+.blk-navy .blk-note{background:rgba(255,255,255,.05);border-color:var(--mint);color:rgba(255,255,255,.55)}
+.blk-ice .blk-note{background:rgba(25,116,138,.07);border-color:var(--teal);color:var(--gray)}
+.blk-note strong{font-weight:600}
+.blk-teal .blk-note strong{color:#fff} .blk-navy .blk-note strong{color:var(--mint)} .blk-ice .blk-note strong{color:var(--navy)}
+.blk-lnk{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:gap .2s}
+.blk-teal .blk-lnk{color:#fff} .blk-navy .blk-lnk{color:var(--mint)} .blk-ice .blk-lnk{color:var(--navy)}
+.blk-lnk:hover{gap:16px}
+.blk-arr{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0}
+.blk-teal .blk-arr{background:rgba(255,255,255,.2)} .blk-navy .blk-arr{background:rgba(166,245,192,.2);color:var(--mint)} .blk-ice .blk-arr{background:var(--navy);color:#fff}
+
+/* OUTCOMES */
+.outcomes{padding:84px 80px;background:var(--white)}
+.out-hd{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:52px;gap:48px}
+.out-hd h2{font-size:50px;color:var(--navy)}
+.out-hd h2 .it{font-size:40px}
+.out-hd p{font-size:14px;color:var(--gray);line-height:1.85;max-width:340px;padding-top:8px;font-weight:300}
+.out-grid{display:grid;grid-template-columns:330px 1fr 1fr;gap:12px}
+.o-feat{background:var(--navy);padding:40px 36px;display:flex;flex-direction:column}
+.o-av{width:42px;height:42px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#fff;margin-bottom:14px;border:2px solid var(--mint);flex-shrink:0}
+.o-tag{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--mint);margin-bottom:10px;display:block}
+.o-title{font-size:17px;font-weight:600;color:#fff;margin-bottom:14px;line-height:1.2}
+.o-body{font-size:13px;color:rgba(255,255,255,.5);line-height:1.8;margin-bottom:22px;flex:1;font-weight:300}
+.o-btns{display:flex;gap:8px;flex-wrap:wrap}
+.ob{padding:9px 20px;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;cursor:pointer;border:none;transition:all .2s;border-radius:999px;white-space:nowrap}
+.ob-mn{background:var(--mint);color:var(--navy)} .ob-mn:hover{opacity:.85}
+.ob-ol{background:transparent;border:1px solid rgba(255,255,255,.22);color:rgba(255,255,255,.65)} .ob-ol:hover{border-color:var(--mint);color:var(--mint)}
+.o-mid{background:var(--white);padding:40px 36px}
+.o-person{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.o-av2{width:40px;height:40px;border-radius:50%;background:var(--cyan);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--teal);flex-shrink:0}
+.o-name{font-size:14px;font-weight:700;color:var(--navy)}
+.o-role{font-size:12px;color:var(--teal);font-style:italic;font-weight:300;margin-top:1px}
+.o-mid p{font-size:13px;color:var(--gray);line-height:1.85;margin-bottom:18px;font-weight:300}
+.mrow{display:flex;align-items:center;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--ice)}
+.mk{font-size:12px;color:#6a8090;font-weight:400}
+.mv{font-size:15px;font-weight:700;color:var(--navy)}
+.mv.pos{color:var(--teal)}
+.o-right{background:var(--ice);padding:40px 36px}
+.o-right h3{font-size:17px;font-weight:600;color:var(--navy);margin-bottom:16px;font-style:italic}
+.o-list{list-style:none;display:flex;flex-direction:column;gap:2px}
+.o-list li{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--ice-md);font-size:13px;color:var(--gray);line-height:1.55;font-weight:300}
+.tg{font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;white-space:nowrap;flex-shrink:0;margin-top:2px}
+.tg-tl{background:var(--teal);color:#fff} .tg-nv{background:var(--navy);color:#fff} .tg-mn{background:var(--mint);color:var(--navy)} .tg-cy{background:var(--cyan);color:var(--teal)}
+.o-acts{display:flex;align-items:center;justify-content:space-between;margin-top:16px;padding-top:14px;border-top:1px solid var(--ice-md);flex-wrap:wrap;gap:10px}
+.o-lnk{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--navy);text-decoration:none;display:flex;align-items:center;gap:8px;transition:gap .2s}
+.o-lnk:hover{gap:14px;color:var(--teal)}
+.o-arr{width:30px;height:30px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px}
+
+/* DOMAINS */
+.domains{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.dom-big{grid-column:1;grid-row:1/3;background:var(--teal);padding:72px 80px;display:flex;flex-direction:column;justify-content:flex-end}
+.dom-big h2{font-size:54px;color:#fff;margin-bottom:20px}
+.dom-big p{font-size:14px;color:rgba(255,255,255,.7);line-height:1.85;max-width:340px;margin-bottom:30px;font-weight:300}
+.dom-sm{background:var(--white);padding:42px 64px}
+.dom-sm.dk{background:var(--navy)}
+.dom-n{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:10px;display:block}
+.dom-sm.dk .dom-n{color:var(--mint)}
+.dom-sm h3{font-size:20px;color:var(--navy);margin-bottom:10px}
+.dom-sm.dk h3{color:#fff}
+.dom-sm p{font-size:13px;color:var(--gray);line-height:1.8;font-weight:300}
+.dom-sm.dk p{color:rgba(255,255,255,.48)}
+
+/* ABOUT */
+.about{display:flex;flex-direction:row;background:var(--navy);padding:72px 8%;gap:0;align-items:flex-end;justify-content:center}
+.about-l{display:flex;flex-direction:column;justify-content:flex-start;flex:1;max-width:520px;align-items:flex-start}
+.about-l h2{font-size:52px;color:#fff;margin-bottom:8px}
+.about-l h2 .it-mn{font-size:46px;display:block;margin-top:2px;margin-bottom:26px}
+.about-l p{font-size:18px;color:rgba(255,255,255,.78);line-height:1.95;margin-bottom:18px;max-width:480px;font-weight:400}
+.about-r{display:flex;flex-direction:column;flex-shrink:0;width:560px}
+.cr{padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07);font-size:14px;color:rgba(255,255,255,.72);display:flex;gap:12px;align-items:flex-start;line-height:1.7;font-weight:400}
+.cr::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--mint);flex-shrink:0;margin-top:9px}
+.mission-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:32px}
+.mission-box{background:rgba(255,255,255,.03);padding:26px;border-radius:8px}
+.mission-box h4{font-size:14px;font-weight:600;color:var(--mint);margin-bottom:10px;letter-spacing:.04em}
+.mission-box p{font-size:14px;color:rgba(255,255,255,.65);line-height:1.85;font-weight:400}
+
+/* TESTIMONIALS */
+.testi{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.t-blk{min-width:100%;padding:56px 80px;border-radius:16px;background:rgba(255,255,255,.05);text-align:center;display:flex;flex-direction:column;align-items:center}
+.t-q{font-size:64px;font-weight:300;color:var(--mint);line-height:.6;margin-bottom:24px;opacity:.5;font-style:italic}
+.t-txt{font-size:22px;font-weight:400;font-style:italic;color:#fff;line-height:1.65;margin-bottom:28px;max-width:680px}
+.t-name{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mint)}
+.t-role{font-size:14px;color:rgba(255,255,255,.5);margin-top:5px;font-style:italic;font-weight:400}
+
+/* RESOURCE */
+.resource{display:grid;grid-template-columns:1fr 420px;background:var(--teal)}
+.res-l{padding:84px 80px;border-right:1px solid rgba(255,255,255,.14)}
+.res-l h2{font-size:50px;color:#fff;margin-bottom:20px}
+.res-l p{font-size:18px;color:rgba(255,255,255,.85);line-height:1.9;max-width:520px;margin-bottom:22px;font-weight:400}
+.res-list{list-style:none;margin-bottom:26px}
+.res-list li{padding:11px 0;border-bottom:1px solid rgba(255,255,255,.13);font-size:15px;color:rgba(255,255,255,.82);display:flex;gap:12px;align-items:center;font-weight:400}
+.res-list li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--mint);flex-shrink:0}
+.res-note{font-size:17px;font-style:italic;color:rgba(255,255,255,.75);line-height:1.8;font-weight:400}
+.res-r{background:rgba(0,0,0,.18);padding:84px 48px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+.res-lbl{font-size:11px;font-weight:500;color:rgba(255,255,255,.48);letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+.res-title{font-size:32px;font-weight:600;color:#fff;line-height:1.05;margin-bottom:14px}
+.res-sub{font-size:13px;color:rgba(255,255,255,.55);margin-bottom:28px;line-height:1.75;font-weight:300}
+.btn-mint-blk{display:inline-block;background:var(--mint);color:var(--navy);padding:14px 32px;font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;border:2px solid var(--mint);transition:all .2s;text-align:center;border-radius:999px;white-space:nowrap}
+.btn-mint-blk:hover{background:transparent;color:var(--mint)}
+
+/* RESOURCE CARD */
+.resource-card-wrap{background:var(--off);padding:60px 80px;border-bottom:2px solid var(--ice-md)}
+.resource-card{position:relative;overflow:hidden;background:var(--teal-dp);border-radius:16px}
+.resource-bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:right center;z-index:0}
+.resource-card-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(10,46,74,.92) 0%,rgba(10,46,74,.85) 45%,rgba(10,46,74,.3) 100%);z-index:1}
+.resource-card-l{position:relative;z-index:2;padding:60px 80px;max-width:820px}
+.resource-card-l h2{font-size:36px;color:#fff;margin-bottom:18px;font-weight:600;letter-spacing:-0.02em}
+.resource-card-l p{font-size:15px;color:rgba(255,255,255,.82);line-height:1.9;max-width:680px;margin-bottom:16px;font-weight:400}
+.res-note{font-size:17px;font-style:italic;color:rgba(255,255,255,.72);line-height:1.8;font-weight:400;margin-bottom:0}
+.res-lbl{font-size:11px;font-weight:500;color:rgba(255,255,255,.48);letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;display:block}
+.res-title{font-size:30px;font-weight:600;color:#fff;line-height:1.1;margin-bottom:24px}
+.btn-mint-blk{display:block;background:var(--mint);color:var(--navy);padding:14px 24px;font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;border:2px solid var(--mint);transition:all .2s;width:100%;text-align:center}
+.btn-mint-blk:hover{background:transparent;color:var(--mint)}
+
+/* FINAL */
+.final{position:relative;overflow:hidden;background:var(--navy);padding:96px 80px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.final-bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;z-index:0}
+.final-bg-overlay{position:absolute;inset:0;background:rgba(10,46,74,.78);z-index:1}
+.final h2{font-size:52px;color:#fff;margin-bottom:24px;line-height:1.1;letter-spacing:-0.02em}
+.final h2 span{color:var(--mint)}
+.final p{font-size:19px;color:#fff;line-height:1.9;max-width:680px;margin-bottom:16px;font-weight:400}
+.final-btns{display:flex;gap:14px;flex-wrap:wrap;margin:28px 0 0;justify-content:center}
+.final-contact{display:none}
+
+/* FOOTER */
+footer{background:#03111e;padding:32px 80px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:2px solid var(--teal)}
+.ft-logo{font-size:18px;font-weight:800;color:rgba(255,255,255,.32);letter-spacing:.05em;display:flex;align-items:center;gap:6px}
+.ft-logo span{color:rgba(166,245,192,.32)}
+.ft-logo em{font-style:italic;font-weight:300;font-size:12px;color:rgba(166,245,192,.2);margin-left:4px}
+.ft-c{font-size:13px;color:rgba(255,255,255,.4);text-align:center;line-height:1.8}
+.ft-r{font-size:12px;color:rgba(255,255,255,.3);text-align:right}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo"><img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1775546141/logo_scan_logic_uieusy.png" alt="SCANLogic™" class="logo-img"></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#framework">Framework</a></li>
+    <li><a href="#contact" class="cta">Consultation</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1775549216/judy_mcfarlen_hero_wxxutn.png" alt="Dr. Judy McFarlen" class="hero-photo">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="ey ey-lt">Ultrasound Consistency</span>
+    <h1>Standardized Decisions<span class="sub">across every clinician &amp; every case.</span></h1>
+    <span class="hero-sh">Standardize Your Diagnostic Workflow — Deliver Predictable Veterinary Outcomes</span>
+    <p>SCANLogic transforms ultrasound from a clinician-dependent skill into a standardized decision system so utilization stays consistent, diagnostic confidence increases, and your investment finally delivers predictable outcomes.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn btn-mint">Schedule Consultation</a>
+      <a href="#assessment" class="btn btn-omint">Take Readiness Assessment</a>
+    </div>
+  </div>
+</div>
+
+<!-- CREDIBILITY -->
+<div class="cred-wrap">
+  <div class="cred-l">
+    <div class="cred-l-text">
+      <span class="ey">Credibility</span>
+      <h2>Three Decades<br>of Clinical Insight.<span class="it">One Unshakable Truth.</span></h2>
+      <p class="cred-sub">Built in real clinics. Proven under pressure.</p>
+      <p class="cred-close">This work is grounded in volume, longevity, and lived clinical reality. Not theory.</p>
+    </div>
+    <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1775571807/judy_mcfarlen_3_dog_hwcgp0.png" alt="Dr. Judy McFarlen with dog" class="cred-l-img">
+  </div>
+  <div class="cred-r">
+    <div class="cred-items">
+      <div class="cred-item"><div class="cn">01</div><div><div class="ct">37+ Years in Veterinary Medicine</div><div class="cd">Active clinical practice spanning emergency, rural, remote, and multi-location hospital settings</div></div></div>
+      <div class="cred-item"><div class="cn">02</div><div><div class="ct">25+ Years Designing Ultrasound Decision Systems</div><div class="cd">Built and refined in active clinical environments — not simulated or theoretical contexts</div></div></div>
+      <div class="cred-item"><div class="cn">03</div><div><div class="ct">10,000+ Patients Scanned</div><div class="cd">Across emergency, general practice, and multi-doctor hospitals in urban and remote settings</div></div></div>
+      <div class="cred-item"><div class="cn">04</div><div><div class="ct">Multiple Practice Settings</div><div class="cd">Emergency clinics, rural and remote practices, and multi-location hospitals across diverse regions</div></div></div>
+      <div class="cred-item"><div class="cn">05</div><div><div class="ct">Cardiology Ultrasound Certified</div><div class="cd">Certified through SonoPath, NJ, USA</div></div></div>
+      <div class="cred-item"><div class="cn">06</div><div><div class="ct">Author &amp; Clinical Contributor</div><div class="cd">Published contributor to veterinary ultrasound literature and clinical education</div></div></div>
+      <div class="cred-item"><div class="cn">07</div><div><div class="ct">Actively Practicing Clinician</div><div class="cd">Integrating the same decision systems in daily patient care — what's taught is what's used</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- STATISTICS -->
+<div class="stats-section">
+  <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1775549977/judy_mcfarlen_paw_owmxif.png" alt="" class="stats-paw-img" aria-hidden="true">
+  <div class="stats-inner">
+    <div class="stats-hd">
+      <span class="ey ey-lt">Impact of systemized ultrasound use</span>
+      <h2>When ultrasound is used with clear intent and decision structure, measurable shifts occur.</h2>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-num">30–60%</div>
+        <div class="stat-title">reduction in ultrasound-related decision hesitation</div>
+        <div class="stat-desc">Clinicians move more quickly from image acquisition to defensible next steps when diagnostic intent is defined before scanning.</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">25–50%</div>
+        <div class="stat-title">improvement in utilization consistency across clinicians and shifts</div>
+        <div class="stat-desc">Similar cases trigger similar ultrasound use, reducing dependence on individual scanners.</div>
+      </div>
+      <div class="stat-card stat-card-accent">
+        <div class="stat-num">Weeks</div>
+        <div class="stat-title">shaved off the onboarding curve for new clinicians</div>
+        <div class="stat-desc">Standardized decision pathways accelerate confidence and reduce prolonged shadowing.</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">Fewer</div>
+        <div class="stat-title">delayed or skipped scans during high-pressure shifts</div>
+        <div class="stat-desc">Workflow-integrated decision systems maintain reliability even on the busiest days.</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">Stronger</div>
+        <div class="stat-title">clinical alignment across teams and locations</div>
+        <div class="stat-desc">Shared intent and structured pathways reduce variation in case handling.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.stats-section{position:relative;overflow:hidden;background:var(--navy)}
+.stats-paw-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0.45;z-index:0}
+.stats-inner{position:relative;z-index:1;padding:84px 80px}
+.stats-hd{margin-bottom:52px;text-align:center;max-width:760px;margin-left:auto;margin-right:auto}
+.stats-hd h2{font-size:44px;font-weight:600;color:#fff;line-height:1.15;letter-spacing:-0.02em}
+.stats-hd .ey-lt{margin-bottom:16px}
+.stats-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.stat-card{background:rgba(10,46,74,.72);backdrop-filter:blur(6px);padding:40px 32px;border-top:2px solid rgba(255,255,255,.1);transition:all .3s ease;border-radius:16px;cursor:default}
+.stat-card:hover{background:rgba(25,116,138,.75);border-top-color:var(--mint);transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,.35)}
+.stat-card-accent{background:rgba(25,116,138,.82);border-top-color:var(--mint)}
+.stat-card-accent:hover{background:rgba(25,116,138,1);transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,.4)}
+.stat-num{font-size:52px;font-weight:800;color:var(--mint);line-height:1;margin-bottom:14px;letter-spacing:-0.03em;transition:color .3s}
+.stat-card-accent .stat-num{color:#fff}
+.stat-card:not(.stat-card-accent):hover .stat-num{color:#fff}
+.stat-title{font-size:16px;font-weight:600;color:#fff;line-height:1.4;margin-bottom:12px}
+.stat-desc{font-size:15px;font-weight:400;color:rgba(255,255,255,.72);line-height:1.85;transition:color .3s}
+.stat-card:hover .stat-desc{color:rgba(255,255,255,.85)}
+</style>
+
+<!-- SERVICES CAROUSEL -->
+<div class="svc-section">
+  <div class="svc-header">
+    <div class="svc-header-center">
+      <span class="ey" style="color:var(--teal)">Services</span>
+      <h2>Three phases to reliable<br>ultrasound decisions</h2>
+      <p class="svc-intro">SCANLogic builds ultrasound decision systems through a structured, practice-level approach. Choose your starting point based on where you are now.</p>
+      <div class="svc-tabs">
+        <button class="svc-tab active" onclick="svcGo(0)"><span class="svc-tab-phase">Phase 1</span><span class="svc-tab-name">Assessment</span></button>
+        <button class="svc-tab" onclick="svcGo(1)"><span class="svc-tab-phase">Phase 2</span><span class="svc-tab-name">Implementation</span></button>
+        <button class="svc-tab" onclick="svcGo(2)"><span class="svc-tab-phase">Phase 3</span><span class="svc-tab-name">Sustained Integration</span></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="svc-carousel-wrap">
+    <div class="svc-track" id="svcTrack">
+
+      <!-- Slide 1 -->
+      <div class="svc-slide">
+        <div class="svc-img-col">
+          <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1775550501/judy_mcfarlen_phase_1_iiowrd.png" alt="Phase 1 Assessment" class="svc-photo">
+          <div class="svc-phase-badge">Phase 1</div>
+        </div>
+        <div class="svc-content-col">
+          <span class="svc-phase-tag">Phase 1: Assessment</span>
+          <h3 class="svc-title">Ultrasound Decision System Assessment</h3>
+          <p class="svc-body">Establish baseline clarity on how ultrasound decisions are currently made and supported across your practice.</p>
+          <p class="svc-body">We review how ultrasound informs clinical choices today, map where it should be used versus where it actually is, and identify the highest-leverage breakdown points. You receive a strategic consult session, written readiness report, and optional leadership debrief with prioritized next steps.</p>
+          <div class="svc-callout">
+            <span class="svc-callout-lbl">Best for:</span> Multi-doctor hospitals, medical directors, and practices with equipment and training already in place but inconsistent utilization.
+          </div>
+          <a href="#contact" class="btn btn-mint svc-cta">Start With a Strategic Assessment</a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="svc-slide">
+        <div class="svc-img-col">
+          <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1775550502/judy_mcfarlen_phase_2_ezqhbc.png" alt="Phase 2 Implementation" class="svc-photo">
+          <div class="svc-phase-badge">Phase 2</div>
+        </div>
+        <div class="svc-content-col">
+          <span class="svc-phase-tag">Phase 2: Implementation</span>
+          <h3 class="svc-title">Ultrasound Decision System Implementation</h3>
+          <p class="svc-body">Build and embed standardized decision pathways so ultrasound reliably informs clinical decisions.</p>
+          <p class="svc-body">We develop standardized pathways from scan to interpretation to the next step. We create workflow and scheduling supports that survive real clinic pressure. Delivery includes group training, workshops, and programs in online and live formats.</p>
+          <div class="svc-callout svc-callout-outcome">
+            <span class="svc-callout-lbl">Outcomes:</span> Increased utilization consistency, reduced diagnostic uncertainty, more predictable case flow, and stronger ROI on existing imaging equipment.
+          </div>
+          <a href="#contact" class="btn btn-mint svc-cta">Start With a Strategic Assessment</a>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="svc-slide">
+        <div class="svc-img-col">
+          <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1775550502/judy_mcfarlen_phase_3_oj9teo.png" alt="Phase 3 Sustained Integration" class="svc-photo">
+          <div class="svc-phase-badge">Phase 3</div>
+        </div>
+        <div class="svc-content-col">
+          <span class="svc-phase-tag">Phase 3: Sustained Integration</span>
+          <h3 class="svc-title">SCANLogic™ Sustained Integration Plan</h3>
+          <p class="svc-body">Keep adoption strong over time, across hiring cycles, and across sites.</p>
+          <p class="svc-body">We implement adoption and reinforcement plans, track usage and decision pathway adherence, conduct quarterly case reviews, and build ongoing onboarding for new hires.</p>
+          <div class="svc-callout svc-callout-outcome">
+            <span class="svc-callout-lbl">Outcomes:</span> Durable standardization without rigidity, stable performance across clinicians and locations, and long-term decision reliability.
+          </div>
+          <a href="#contact" class="btn btn-mint svc-cta">Start With a Strategic Assessment</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="svc-nav">
+    <div class="svc-dots">
+      <span class="svc-dot active" onclick="svcGo(0)"></span>
+      <span class="svc-dot" onclick="svcGo(1)"></span>
+      <span class="svc-dot" onclick="svcGo(2)"></span>
+    </div>
+  </div>
+</div>
+
+<style>
+.svc-section{background:var(--white);border-bottom:2px solid var(--ice-md)}
+.svc-header{background:var(--white);display:flex;justify-content:center;padding:64px 80px 52px}
+.svc-header-center{display:flex;flex-direction:column;align-items:center;text-align:center;max-width:900px;width:100%}
+.svc-header-center h2{font-size:44px;color:var(--navy);margin-bottom:16px;line-height:1.08;white-space:nowrap}
+.svc-intro{font-size:18px;color:var(--gray);line-height:1.88;font-weight:400;max-width:640px;margin-bottom:36px}
+.svc-tabs{display:flex;flex-direction:row;gap:8px;width:100%;justify-content:center}
+.svc-tab{background:var(--ice);border:none;cursor:pointer;padding:22px 32px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px;border-bottom:3px solid transparent;border-left:none;transition:all .2s;font-family:'Outfit',sans-serif;border-radius:12px;flex:1;max-width:240px}
+.svc-tab:hover{background:var(--ice-md);border-bottom-color:var(--teal);border-left:none}
+.svc-tab.active{background:var(--navy);border-bottom-color:var(--mint);border-left:none}
+.svc-tab-phase{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal)}
+.svc-tab.active .svc-tab-phase{color:var(--mint)}
+.svc-tab-name{font-size:17px;font-weight:600;color:var(--navy)}
+.svc-tab.active .svc-tab-name{color:#fff}
+.svc-carousel-wrap{overflow:hidden;padding:0 80px}
+.svc-track{display:flex;transition:transform .45s cubic-bezier(.4,0,.2,1)}
+.svc-slide{min-width:100%;display:grid;grid-template-columns:380px 1fr;background:var(--white);border-radius:16px;overflow:hidden}
+.svc-img-col{position:relative;background:var(--teal-dp);min-height:520px;overflow:hidden}
+.svc-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.svc-phase-badge{position:absolute;top:32px;left:32px;background:var(--mint);color:var(--navy);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:7px 16px}
+.svc-content-col{padding:64px 80px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.svc-phase-tag{font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:16px}
+.svc-title{font-size:38px;font-weight:600;color:var(--navy);line-height:1.1;margin-bottom:26px;letter-spacing:-0.02em}
+.svc-body{font-size:18px;color:var(--gray);line-height:1.9;margin-bottom:18px;font-weight:400;max-width:560px}
+.svc-callout{font-size:17px;color:var(--gray);line-height:1.8;padding:18px 22px;border-left:3px solid var(--teal);background:var(--ice);margin-bottom:28px;font-weight:400;border-radius:4px}
+.svc-callout-outcome{border-left-color:var(--mint);background:rgba(166,245,192,.08)}
+.svc-callout-lbl{font-weight:700;color:var(--navy)}
+.svc-cta{display:inline-block;text-align:center;white-space:nowrap;width:auto}
+.svc-nav{display:flex;align-items:center;justify-content:center;gap:20px;padding:24px 80px 32px;background:transparent}
+.svc-arr-btn{width:40px;height:40px;border:2px solid var(--ice-md);background:var(--white);color:var(--teal);font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;font-family:'Outfit',sans-serif;border-radius:999px}
+.svc-arr-btn:hover:not(:disabled){background:var(--teal);color:#fff;border-color:var(--teal)}
+.svc-arr-btn:disabled{opacity:.3;cursor:default}
+.svc-dots{display:flex;gap:10px;align-items:center}
+.svc-dot{width:10px;height:10px;border-radius:50%;background:var(--ice-md);cursor:pointer;transition:all .3s}
+.svc-dot.active{background:var(--teal);width:36px;border-radius:5px}
+</style>
+
+<script>
+(function(){
+  var cur=0,total=3;
+  function update(){
+    document.getElementById('svcTrack').style.transform='translateX(-'+cur*100+'%)';
+    document.querySelectorAll('.svc-tab').forEach(function(t,i){t.classList.toggle('active',i===cur)});
+    document.querySelectorAll('.svc-dot').forEach(function(d,i){d.classList.toggle('active',i===cur)});
+    
+    
+  }
+  window.svcGo=function(n){cur=n;update()};
+  window.svcPrev=function(){if(cur>0){cur--;update()}};
+  window.svcNext=function(){if(cur<total-1){cur++;update()}};
+})();
+</script>
+
+<!-- PROBLEM SECTION -->
+<div class="prob-section">
+  <div class="prob-top">
+    <div class="prob-top-l">
+      <span class="ey">The problem</span>
+      <h2>Variability Is a Systems Failure<br><span class="it">Not a Skills Issue</span></h2>
+      <p class="prob-lead">Your equipment works. Your clinicians are trained. So why do ultrasound decisions still vary?</p>
+      <p class="prob-sub">Because ultrasound has been treated as a skill problem when it's actually a systems problem.</p>
+      <p class="prob-body">Most practices invest in capable equipment and send clinicians to training. But when those trained clinicians leave for the day, utilization collapses. New hires scan hesitantly. Decisions vary between shifts. What should be standard becomes situational.</p>
+    </div>
+    <div class="prob-top-r">
+      <p class="prob-pattern-lbl">You see the pattern:</p>
+      <ul class="prob-list">
+        <li>Ultrasound use depends on who is on shift, not what the case needs</li>
+        <li>Findings increase uncertainty instead of reducing it</li>
+        <li>Busy days mean workarounds, delays, or skipped scans entirely</li>
+        <li>New clinicians take months to reach consistency, if they ever do</li>
+        <li>The same cases are handled differently by different doctors</li>
+        <li>Equipment sits underutilized while diagnostic questions go unanswered</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="prob-mid">
+    <div class="prob-mid-hd">
+      <p class="prob-risk">This variability isn't just inefficient. It's a risk.</p>
+      <p class="prob-risk-sub">When ultrasound decisions vary between clinicians, the consequences compound:</p>
+    </div>
+    <div class="prob-consequences">
+      <div class="prob-con"><div class="prob-con-icon">01</div><div class="prob-con-title">Diagnostic uncertainty grows.</div><div class="prob-con-desc">Findings that should clarify next steps create hesitation</div></div>
+      <div class="prob-con"><div class="prob-con-icon">02</div><div class="prob-con-title">Case flow stalls.</div><div class="prob-con-desc">Delays multiply. Clients notice differences between doctors</div></div>
+      <div class="prob-con"><div class="prob-con-icon">03</div><div class="prob-con-title">Standards erode under pressure.</div><div class="prob-con-desc">Shortcuts and workarounds become norms</div></div>
+      <div class="prob-con"><div class="prob-con-icon">04</div><div class="prob-con-title">Onboarding stretches on.</div><div class="prob-con-desc">New hires struggle without decision frameworks</div></div>
+      <div class="prob-con"><div class="prob-con-icon">05</div><div class="prob-con-title">Equipment ROI stagnates</div><div class="prob-con-desc">because utilization remains sporadic</div></div>
+      <div class="prob-con"><div class="prob-con-icon">06</div><div class="prob-con-title">Confidence fractures.</div><div class="prob-con-desc">Clinicians second-guess decisions when pathways aren't clear</div></div>
+    </div>
+  </div>
+
+  <div class="prob-close">
+    <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1775566115/dog_comox_lake_LE_upscale_prime_1_fscvub.png" alt="" class="prob-close-bg" aria-hidden="true">
+    <div class="prob-close-overlay"></div>
+    <div class="prob-close-content">
+      <p class="prob-pivot">Most practices assume this variability is unavoidable. It isn't.</p>
+      <p class="prob-pivot-body">It's the predictable outcome of training individuals without building systems that support them.</p>
+      <p class="prob-pivot-body">When decision-making is structurally supported, when intent is shared, pathways are clear, and workflows reinforce clinical judgment, ultrasound becomes what it should be: a reliable tool for defensible decisions, not a clinician-dependent skill.</p>
+      <a href="#assessment" class="btn btn-navy" style="margin-top:8px;display:inline-block">Assess Your Practice's Ultrasound Decision Readiness</a>
+    </div>
+  </div>
+</div>
+
+<style>
+.prob-section{background:var(--white);border-bottom:2px solid var(--ice-md)}
+.prob-top{display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:2px solid var(--ice-md)}
+.prob-top-l{padding:84px 80px 72px;border-right:2px solid var(--ice-md)}
+.prob-top-l h2{font-size:46px;color:var(--navy);margin-bottom:20px}
+.prob-lead{font-size:18px;font-weight:500;color:var(--navy);line-height:1.55;margin-bottom:12px}
+.prob-sub{font-size:18px;font-weight:600;color:var(--teal);line-height:1.55;margin-bottom:20px;font-style:italic}
+.prob-body{font-size:18px;color:var(--gray);line-height:1.9;font-weight:400;max-width:480px}
+.prob-top-r{padding:84px 80px 72px;background:var(--off)}
+.prob-pattern-lbl{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:20px;display:block}
+.prob-list{list-style:none;display:flex;flex-direction:column;gap:0}
+.prob-list li{font-size:17px;color:var(--navy);line-height:1.75;padding:14px 0;border-bottom:1px solid var(--ice-md);display:flex;align-items:flex-start;gap:14px;font-weight:400}
+.prob-list li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--teal);flex-shrink:0;margin-top:9px}
+.prob-mid{position:relative;overflow:hidden;background:var(--navy);padding:72px 80px;border-bottom:2px solid rgba(255,255,255,.06)}
+.prob-mid::before{content:'';position:absolute;inset:0;background-image:url('https://res.cloudinary.com/dcuswyfur/image/upload/v1775549977/judy_mcfarlen_paw_owmxif.png');background-size:cover;background-position:center;opacity:0.45;z-index:0}
+.prob-mid-hd{position:relative;z-index:1;margin-bottom:40px;text-align:center}
+.prob-risk{font-size:34px;font-weight:600;color:#fff;margin-bottom:14px;line-height:1.3}
+.prob-risk-sub{font-size:22px;color:rgba(255,255,255,.88);font-weight:400}
+.prob-consequences{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;position:relative;z-index:1}
+.prob-con{background:rgba(10,46,74,.72);backdrop-filter:blur(6px);padding:32px 24px;display:flex;flex-direction:column;gap:12px;border-top:2px solid rgba(255,255,255,.1);transition:all .3s ease;border-radius:12px}
+.prob-con:hover{background:rgba(25,116,138,.75);border-top-color:var(--mint);transform:translateY(-4px)}
+.prob-con-icon{font-size:16px;font-weight:700;letter-spacing:.08em;color:var(--mint);flex-shrink:0}
+.prob-con-title{font-size:18px;font-weight:600;color:#fff;margin-bottom:8px;line-height:1.4}
+.prob-con-desc{font-size:16px;color:rgba(255,255,255,.82);line-height:1.85;font-weight:400}
+.prob-close{position:relative;overflow:hidden;min-height:420px;display:flex;align-items:center}
+.prob-close-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0}
+.prob-close-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(255,255,255,0.97) 0%,rgba(255,255,255,0.92) 40%,rgba(255,255,255,0.6) 65%,rgba(255,255,255,0) 100%);z-index:1}
+.prob-close-content{position:relative;z-index:2;padding:72px 80px;max-width:820px}
+.prob-pivot{font-size:26px;font-weight:600;color:var(--navy);margin-bottom:20px;line-height:1.1;white-space:nowrap}
+.prob-pivot-body{font-size:18px;color:var(--gray);line-height:1.9;font-weight:400;max-width:680px;margin-bottom:18px}
+</style>
+
+<!-- WHAT BECOMES POSSIBLE -->
+<div class="possible-section" id="framework">
+  <div class="possible-two-col">
+    <div class="possible-left">
+      <div class="possible-hd">
+        <span class="ey">What becomes possible</span>
+        <h2>When ultrasound decisions are<br>structurally supported:</h2>
+      </div>
+      <div class="possible-grid">
+        <div class="possible-item">
+          <div class="possible-n">01</div>
+          <div class="possible-text">
+            <div class="possible-title">Shared diagnostic intent drives purposeful scanning.</div>
+            <div class="possible-desc">Your team knows why they're scanning before they pick up the probe, not after.</div>
+          </div>
+        </div>
+        <div class="possible-item">
+          <div class="possible-n">02</div>
+          <div class="possible-text">
+            <div class="possible-title">Consistent utilization across your entire team.</div>
+            <div class="possible-desc">Similar cases trigger similar use, regardless of who's on shift.</div>
+          </div>
+        </div>
+        <div class="possible-item">
+          <div class="possible-n">03</div>
+          <div class="possible-text">
+            <div class="possible-title">Reduced hesitation and clearer next-step pathways.</div>
+            <div class="possible-desc">Findings clarify decisions instead of creating uncertainty.</div>
+          </div>
+        </div>
+        <div class="possible-item">
+          <div class="possible-n">04</div>
+          <div class="possible-text">
+            <div class="possible-title">Workflow integration that survives busy shifts and staff changes.</div>
+            <div class="possible-desc">Reliability doesn't collapse when schedules tighten.</div>
+          </div>
+        </div>
+        <div class="possible-item">
+          <div class="possible-n">05</div>
+          <div class="possible-text">
+            <div class="possible-title">Sustainable decision reliability across hiring cycles and growth.</div>
+            <div class="possible-desc">New clinicians reach consistency faster because the system supports them.</div>
+          </div>
+        </div>
+        <div class="possible-item possible-item-full">
+          <div class="possible-n">06</div>
+          <div class="possible-text">
+            <div class="possible-title">The equipment and training you've already invested in finally delivers predictable outcomes.</div>
+          </div>
+        </div>
+      </div>
+      <div class="possible-cta-row">
+        <p class="possible-tagline">Transform ultrasound from a variable skill into a predictable, team-wide diagnostic superpower.</p>
+        <a href="#contact" class="btn btn-navy">Pinpoint Your Greatest Lever</a>
+      </div>
+    </div>
+    <div class="possible-img-col">
+      <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1775566456/judy_mcfarlen_4_wlpubv.png" alt="Dr. Judy McFarlen" class="possible-img">
+    </div>
+  </div>
+</div>
+
+<!-- WHAT MAKES SCANLOGIC DIFFERENT -->
+<div class="diff-section">
+  <div class="diff-l">
+    <span class="ey ey-lt">What makes SCANLogic™ different</span>
+    <h2>From Reactive Scanning to<br><span class="it-mn">Reliable Decision Architecture</span></h2>
+    <p class="diff-body">SCANLogic™ doesn't teach clinicians to collect better images. It builds the structural supports that make ultrasound decisions consistent, defensible, and sustainable across your entire practice.</p>
+    <p class="diff-close">This is not another training program. It's the system that makes training stick, and what consistency looks like when it's designed, not hoped for.</p>
+    <a href="#framework" class="btn btn-omint" style="margin-top:32px;display:inline-block">Explore the SCANLogic™ Framework</a>
+  </div>
+  <div class="diff-r">
+    <div class="diff-item">
+      <div class="diff-label">Intent Before Image</div>
+      <div class="diff-desc">Clinicians define the diagnostic question before scanning. Shared language replaces reactive use.</div>
+    </div>
+    <div class="diff-item">
+      <div class="diff-label">Context Over Interpretation</div>
+      <div class="diff-desc">Findings are understood within the clinical picture, not isolated in hindsight.</div>
+    </div>
+    <div class="diff-item">
+      <div class="diff-label">Systems That Survive Pressure</div>
+      <div class="diff-desc">Workflow integration means reliability doesn't collapse when schedules tighten or staff changes.</div>
+    </div>
+    <div class="diff-item">
+      <div class="diff-label">Scalability Without Rigidity</div>
+      <div class="diff-desc">Standards protect care quality. Clinical autonomy remains intact.</div>
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<div class="testi-section">
+  <div class="testi-hd">
+    <span class="ey">What clients say</span>
+    <h2>What Happens When Ultrasound<br>Becomes a Decision System</h2>
+    <p class="testi-sub">Real feedback from veterinary professionals who made the shift from individual skill to structural reliability.</p>
+  </div>
+
+  <div class="testi-stage">
+    <button class="testi-arr" onclick="testiPrev()" id="testiPrev" disabled>←</button>
+
+    <div class="testi-carousel-wrap">
+      <div class="testi-track" id="testiTrack">
+        <div class="t-blk t-blk-1">
+          <div class="t-q">"</div>
+          <div class="t-txt">Dr. McFarlen doesn't just teach ultrasound. She teaches you how to think with it.</div>
+          <div class="t-attr">
+            <div class="t-avatar t-av-1">MD</div>
+            <div><div class="t-name">Medical Director</div><div class="t-role">Multi-Location Veterinary Group</div></div>
+          </div>
+        </div>
+        <div class="t-blk t-blk-2">
+          <div class="t-q">"</div>
+          <div class="t-txt">Our utilization used to drop every time our strongest scanner was off. Now it's consistent across the team.</div>
+          <div class="t-attr">
+            <div class="t-avatar t-av-2">PO</div>
+            <div><div class="t-name">Practice Owner</div><div class="t-role">Independent Hospital</div></div>
+          </div>
+        </div>
+        <div class="t-blk t-blk-3">
+          <div class="t-q">"</div>
+          <div class="t-txt">She helped us see that our problem wasn't training. It was that we hadn't built a system that could survive a busy Tuesday.</div>
+          <div class="t-attr">
+            <div class="t-avatar t-av-3">AV</div>
+            <div><div class="t-name">Associate Veterinarian</div><div class="t-role">Emergency &amp; Specialty Practice</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="testi-arr" onclick="testiNext()" id="testiNext">→</button>
+  </div>
+
+  <div class="testi-dots-row">
+    <span class="testi-dot active" onclick="testiGo(0)"></span>
+    <span class="testi-dot" onclick="testiGo(1)"></span>
+    <span class="testi-dot" onclick="testiGo(2)"></span>
+  </div>
+
+  <div class="testi-footer">
+    <p class="testi-note">Different practices. Different pressures. The same structural shift. These aren't training wins. They're system outcomes.</p>
+    <a href="#assessment" class="btn btn-navy">Assess Your Practice's Ultrasound Decision Readiness</a>
+  </div>
+</div>
+
+<script>
+(function(){
+  var cur=0,total=3;
+  function testiUpdate(){
+    document.getElementById('testiTrack').style.transform='translateX(-'+cur*100+'%)';
+    document.querySelectorAll('.testi-dot').forEach(function(d,i){d.classList.toggle('active',i===cur)});
+    document.getElementById('testiPrev').disabled=cur===0;
+    document.getElementById('testiNext').disabled=cur===total-1;
+  }
+  window.testiGo=function(n){cur=n;testiUpdate()};
+  window.testiPrev=function(){if(cur>0){cur--;testiUpdate()}};
+  window.testiNext=function(){if(cur<total-1){cur++;testiUpdate()}};
+  setInterval(function(){cur=cur<total-1?cur+1:0;testiUpdate();},9000);
+})();
+</script>
+
+<!-- 4 DOMAINS -->
+<div class="domains-section" id="assessment">
+  <div class="dom-intro">
+    <span class="ey ey-lt">The 4 domains of ultrasound decision readiness</span>
+    <h2>Four structural pillars determine whether ultrasound<br>scales reliably across your practice:</h2>
+    <p class="dom-close">When these four domains are structurally supported, ultrasound becomes what every practice needs: a scalable decision system, not a clinician-dependent skill.</p>
+    <a href="#" class="btn btn-white">Take the Readiness Assessment Now</a>
+  </div>
+  <div class="dom-cards">
+    <div class="dom-card">
+      <div class="dom-card-n">Domain 1</div>
+      <h3>Clinical Intent &amp; Diagnostic Alignment</h3>
+      <p>Ultrasound is used for the right clinical question at the right time. Teams share a common "why are we scanning?" language.</p>
+    </div>
+    <div class="dom-card dom-card-dk">
+      <div class="dom-card-n">Domain 2</div>
+      <h3>Utilization Consistency &amp; Decision Reliability</h3>
+      <p>Similar cases trigger similar use across the team. Utilization doesn't collapse when key people are away.</p>
+    </div>
+    <div class="dom-card">
+      <div class="dom-card-n">Domain 3</div>
+      <h3>Decision Competence &amp; Clinical Judgment</h3>
+      <p>Clinicians move from image to meaning to decision with confidence. Hesitation reduces. Follow-through improves.</p>
+    </div>
+    <div class="dom-card dom-card-dk">
+      <div class="dom-card-n">Domain 4</div>
+      <h3>Workflow Integration &amp; System Support</h3>
+      <p>The clinic system reinforces ultrasound decision-making so it becomes the default without relying on individual effort.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="about" id="about">
+  <div class="about-l">
+    <span class="ey ey-mn">About Dr. Judy McFarlen</span>
+    <h2>I Built This Because<span class="it-mn">I Stayed.</span></h2>
+    <p>Thirty-seven years in veterinary medicine teaches you what holds and what breaks under pressure.</p>
+    <p>I stayed through the chaos of emergency clinics in Toronto. Through isolated practices in the Northwest Territories. Through corporate consolidation and the evolution of diagnostic imaging in small animal medicine.</p>
+    <p>Somewhere in those decades scanning more than 10,000 patients, watching talented clinicians struggle with systems that didn't support them I realized the problem wasn't competence. It was the structure.</p>
+    <p>Equipment improved. Training expanded. But utilization remained sporadic. Decisions stayed clinician-dependent. Standards eroded the moment someone took time off or a new hire joined the team.</p>
+    <p>So I stopped teaching people to scan better images. I started building systems that make good decisions easier to reach.</p>
+    <a href="#contact" class="btn btn-mint" style="margin-top:28px;display:inline-block;max-width:260px;text-align:center">Work With Dr. McFarlen</a>
+  </div>
+  <div class="about-r" style="display:flex;align-items:flex-end;justify-content:center;background:transparent">
+    <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1775549215/judy_mcfarlen_about_nxcbrx.png" alt="Dr. Judy McFarlen" style="width:100%;height:auto;object-fit:contain;object-position:bottom center;display:block;border-radius:20px">
+  </div>
+</div>
+
+<!-- Mission / Vision light section -->
+<div class="mv-section">
+  <div class="mv-img-col">
+    <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1775573822/judy_mcfarlen_6_yqkh7e.png" alt="Dr. Judy McFarlen" class="mv-real-img">
+  </div>
+  <div class="mv-content">
+    <div class="mv-blocks-row">
+      <div class="mv-block">
+        <div class="mv-label">Our Mission</div>
+        <p class="mv-text">Transform ultrasound from a clinician-dependent skill into a standardized decision system that protects care quality, reduces diagnostic uncertainty, and scales across teams and locations without removing clinical autonomy.</p>
+      </div>
+      <div class="mv-block">
+        <div class="mv-label">Our Vision</div>
+        <p class="mv-text">Veterinary practices operate with clear diagnostic intent, consistent utilization, confident decision-making, and workflows that reinforce standards even under pressure, even through growth, even across generations of clinicians.</p>
+      </div>
+    </div>
+    <p class="mv-close">When systems support clinicians rather than depend on them, good decisions become easier to reach. That's the future we're building.</p>
+  </div>
+</div>
+
+<style>
+/* MISSION / VISION */
+.mv-section{display:grid;grid-template-columns:420px 1fr;background:var(--ice);border-bottom:2px solid var(--ice-md)}
+.mv-img-col{display:flex;align-items:flex-end;justify-content:center;background:var(--ice-md);border-right:2px solid var(--ice-md);overflow:hidden}
+.mv-real-img{width:100%;height:auto;display:block;object-fit:contain;object-position:bottom center}
+.mv-content{padding:60px 80px;display:flex;flex-direction:column;justify-content:center;gap:16px}
+.mv-blocks-row{display:flex;flex-direction:row;gap:20px;flex-wrap:wrap}.mv-block{background:var(--white);padding:32px 36px;border-left:4px solid var(--teal);border-radius:10px;flex:1;min-width:280px}
+.mv-label{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
+.mv-text{font-size:18px;color:var(--gray);line-height:1.9;font-weight:400}
+.mv-close{font-size:19px;color:var(--teal);font-style:italic;font-weight:500;line-height:1.8;padding:24px 0 0}
+</style>
+
+<!-- FREE RESOURCE -->
+<div class="resource-card-wrap">
+  <div class="resource-card">
+    <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1775569992/judy_mcfarlen_3_pej3a2.png" alt="" class="resource-bg-img" aria-hidden="true">
+    <div class="resource-card-overlay"></div>
+    <div class="resource-card-l">
+      <span class="ey ey-lt">Complimentary 4-Domain Readiness Assessment</span>
+      <h2>4-Domain Readiness Assessment</h2>
+      <p>How ready is your practice for standardized ultrasound decisions at scale?</p>
+      <p>This leadership assessment helps you identify which structural domains currently support consistent decision-making and which create fragility as your practice grows, changes clinicians, or expands operations.</p>
+      <p>Evaluate all four domains: Clinical Intent, Utilization Consistency, Decision Competence, and Workflow Integration. Understand which domains would strengthen decision reliability across your entire practice.</p>
+      <p class="res-note">This is not a training checklist. It's a strategic diagnostic tool for practice leaders who recognize that ultrasound variability is a systems problem, not a skills problem.</p>
+      <a href="#" class="btn-mint-blk" style="margin-top:28px">Take Your Complimentary Readiness Assessment.</a>
+    </div>
+  </div>
+</div>
+
+<!-- FINAL CTA -->
+<div class="final" id="contact">
+  <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1776335135/funny-golden-retriever-flowering-field_1_tabtev.png" alt="" class="final-bg-img" aria-hidden="true">
+  <div class="final-bg-overlay"></div>
+  <span class="ey ey-mn" style="display:block;text-align:center;margin-bottom:16px;position:relative;z-index:2">Ready to build reliable ultrasound decisions?</span>
+  <h2 style="position:relative;z-index:2">Stop Compensating for <span>Fragile Systems.</span><br>Start Building Structure <span>That Scales.</span></h2>
+  <p style="position:relative;z-index:2">Ultrasound equipment is no longer the limiting factor. Training programs are widely available. Yet variability persists because individual competence doesn't create organizational consistency.</p>
+  <p style="position:relative;z-index:2">The work you've already invested in equipment and training can finally deliver predictable outcomes — but only if the system supports it.</p>
+  <div class="final-btns" style="position:relative;z-index:2">
+    <a href="#" class="btn btn-mint">Schedule Your Strategic Consultation Now</a>
+    <a href="#assessment" class="btn btn-omint">Take the 4-Domain Readiness Assessment</a>
+  </div>
+  <div class="final-contact" style="position:relative;z-index:2"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6e180b1a041b0a172e06011a030f0702400d0103">[email&#160;protected]</a> &nbsp;·&nbsp; +1 780 806 6054</div>
+</div>
+
+<style>
+/* WHAT BECOMES POSSIBLE */
+.possible-section{background:var(--white);border-bottom:2px solid var(--ice-md);padding:84px 12%}
+.possible-two-col{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
+.possible-left{display:flex;flex-direction:column}
+.possible-hd{margin-bottom:28px}.possible-hd h2{font-size:42px;color:var(--navy);line-height:1.1}.possible-grid{display:grid;grid-template-columns:1fr;gap:0;margin-bottom:0}
+.possible-item{background:transparent;padding:20px 0;display:flex;gap:16px;align-items:flex-start;border-top:1px solid var(--ice-md);transition:opacity .2s}
+.possible-item:last-child{border-bottom:1px solid var(--ice-md)}
+.possible-item:hover{opacity:.75}
+.possible-item-full{background:transparent;border-top-color:var(--ice-md)}
+.possible-item-full:hover{background:transparent;opacity:.75}
+.possible-img-col{display:flex;align-items:flex-start;justify-content:center}
+.possible-img{width:60%;height:auto;display:block;border-radius:20px;object-fit:contain;object-position:top}
+.possible-n{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--teal);flex-shrink:0;padding-top:3px;min-width:22px}
+.possible-title{font-size:18px;font-weight:600;color:var(--navy);margin-bottom:6px;line-height:1.4}
+.possible-desc{font-size:17px;font-weight:400;color:var(--gray);line-height:1.8}
+.possible-cta-row{display:flex;align-items:center;justify-content:space-between;gap:32px;padding:28px 0 0;border-top:1px solid var(--ice-md);margin-top:2px;flex-wrap:wrap}
+.possible-tagline{font-size:18px;font-weight:500;color:var(--navy);line-height:1.5;white-space:nowrap;font-style:italic}
+
+/* DIFF */
+.diff-section{display:grid;grid-template-columns:1fr 1fr;background:var(--navy);position:relative;overflow:hidden}
+.diff-section::before{content:'';position:absolute;inset:0;background-image:url('https://res.cloudinary.com/dcuswyfur/image/upload/v1775549977/judy_mcfarlen_paw_owmxif.png');background-size:cover;background-position:center;opacity:0.45;z-index:0}
+.diff-l{padding:84px 80px;border-right:1px solid rgba(255,255,255,.07);position:relative;z-index:1}
+.diff-l h2{font-size:48px;color:#fff;margin-bottom:24px}
+.diff-body{font-size:18px;color:rgba(255,255,255,.82);line-height:1.9;margin-bottom:20px;font-weight:400;max-width:480px}
+.diff-close{font-size:18px;color:rgba(255,255,255,.75);line-height:1.85;font-style:italic;font-weight:400;max-width:480px}
+.diff-r{padding:84px 80px;display:flex;flex-direction:column;gap:12px;justify-content:center;position:relative;z-index:1}
+.diff-item{padding:30px 32px;border-left:3px solid var(--teal);background:rgba(255,255,255,.04);margin-bottom:10px;transition:background .2s;border-radius:8px}
+.diff-item:hover{background:rgba(255,255,255,.07)}
+.diff-label{font-size:18px;font-weight:600;color:var(--mint);margin-bottom:10px}
+.diff-desc{font-size:18px;font-weight:400;color:rgba(255,255,255,.82);line-height:1.85}
+
+/* TESTIMONIALS SECTION */
+.testi-section{background:var(--off);border-bottom:2px solid var(--ice-md)}
+.testi-hd{padding:72px 80px 48px;text-align:center}
+.testi-hd h2{font-size:40px;color:var(--navy);margin-bottom:14px;line-height:1.1}
+.testi-sub{font-size:18px;color:var(--gray);font-weight:400;line-height:1.85;max-width:600px;margin:0 auto}
+.testi-stage{display:flex;align-items:center;gap:24px;padding:0 52px;justify-content:center}
+.testi-carousel-wrap{overflow:hidden;width:100%;max-width:760px}
+.testi-track{display:flex;transition:transform .9s cubic-bezier(.4,0,.2,1)}
+.t-blk{min-width:100%;padding:52px 60px;border-radius:24px;text-align:center;display:flex;flex-direction:column;align-items:center;box-shadow:0 4px 32px rgba(10,46,74,.08)}
+.t-blk-1{background:#EAF6FF}
+.t-blk-2{background:#EAF5EE}
+.t-blk-3{background:#FFF5EA}
+.t-q{font-size:52px;font-weight:300;line-height:.6;margin-bottom:20px;font-style:italic;opacity:.45}
+.t-blk-1 .t-q{color:var(--teal)}
+.t-blk-2 .t-q{color:#2e7d52}
+.t-blk-3 .t-q{color:#b05c14}
+.t-txt{font-size:20px;font-weight:400;font-style:italic;color:var(--navy);line-height:1.65;margin-bottom:32px;max-width:580px}
+.t-attr{display:flex;align-items:center;gap:14px}
+.t-avatar{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0}
+.t-av-1{background:var(--cyan);color:var(--teal-dp)}
+.t-av-2{background:#c8f0da;color:#1a5c38}
+.t-av-3{background:#fde8c8;color:#8a3e0a}
+.t-name{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--navy);text-align:left}
+.t-role{font-size:13px;color:var(--gray);margin-top:2px;font-style:italic;font-weight:400;text-align:left}
+.testi-arr{width:44px;height:44px;border:2px solid var(--ice-md);background:var(--white);color:var(--teal);font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;font-family:'Outfit',sans-serif;border-radius:999px;flex-shrink:0}
+.testi-arr:hover:not(:disabled){border-color:var(--teal);background:var(--teal);color:#fff}
+.testi-arr:disabled{opacity:.3;cursor:default}
+.testi-dots-row{display:flex;gap:8px;align-items:center;justify-content:center;padding:24px 0 8px}
+.testi-dot{width:8px;height:8px;border-radius:50%;background:var(--ice-md);cursor:pointer;transition:all .2s}
+.testi-dot.active{background:var(--teal);width:24px;border-radius:4px}
+.testi-footer{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:20px;padding:24px 80px 64px;text-align:center}
+.testi-note{font-size:18px;font-style:italic;color:var(--gray);font-weight:400;max-width:600px;line-height:1.8}
+
+/* 4 DOMAINS */
+.domains-section{background:var(--teal)}
+.dom-intro{padding:84px 80px 60px;text-align:center;display:flex;flex-direction:column;align-items:center}
+.dom-intro h2{font-size:38px;color:#fff;margin-bottom:18px;line-height:1.25;max-width:860px}
+.dom-close{font-size:18px;color:rgba(255,255,255,.85);line-height:1.9;max-width:640px;margin-bottom:28px;font-weight:400}
+.dom-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:32px 80px 72px}
+.dom-card{background:var(--white);padding:44px 36px;border-radius:12px}
+.dom-card-dk{background:var(--navy)}
+.dom-card-n{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:12px;display:block}
+.dom-card-dk .dom-card-n{color:var(--mint)}
+.dom-card h3{font-size:18px;color:var(--navy);margin-bottom:12px;line-height:1.25}
+.dom-card-dk h3{color:#fff}
+.dom-card p{font-size:14px;color:var(--gray);line-height:1.85;font-weight:400}
+.dom-card-dk p{color:rgba(255,255,255,.68)}
+
+/* MISC */
+.cr-note{font-size:14px;font-style:italic;color:rgba(255,255,255,.55);line-height:1.8;font-weight:400;padding:16px 0 0;margin-top:4px}
+.mission-close{font-size:14px;color:rgba(255,255,255,.55);line-height:1.8;font-weight:400;font-style:italic;padding-top:16px;border-top:1px solid rgba(255,255,255,.07);margin-top:2px}
+</style>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-logo"><img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1775546141/logo_scan_logic_uieusy.png" alt="SCANLogic™" class="ft-logo-img"></div>
+  <div class="ft-c">Architect of Scalable Ultrasound Decision Systems &nbsp;·&nbsp; vetjudy@hotmail.com &nbsp;·&nbsp; +1 780 806 6054 &nbsp;·&nbsp; © 2026 Dr. Judy McFarlen. All rights reserved.</div>
+  <div class="ft-r">SCANLogic™</div>
+</footer>
+</body>
+</html>
+Displaying scanlogic v2.html.
