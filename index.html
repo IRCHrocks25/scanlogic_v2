@@ -1,11 +1,3 @@
-
-scanlogic v2.html
-
-Page
-1
-/
-1
-100%
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -256,13 +248,15 @@ footer{background:#03111e;padding:32px 80px;display:flex;align-items:center;just
 .ft-logo em{font-style:italic;font-weight:300;font-size:12px;color:rgba(166,245,192,.2);margin-left:4px}
 .ft-c{font-size:13px;color:rgba(255,255,255,.4);text-align:center;line-height:1.8}
 .ft-r{font-size:12px;color:rgba(255,255,255,.3);text-align:right}
+.ft-built{display:block;margin-top:4px;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.22);text-decoration:none;transition:color .2s}
+.ft-built:hover{color:rgba(166,245,192,.7)}
 </style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="logo"><img src="https://cdn.katalyst-crm.com/t1/cloudinary/logo_scan_logic_uieusy.png" alt="SCANLogic™" class="logo-img"></a>
+  <a href="#" class="logo"><img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1775546141/logo_scan_logic_uieusy.png" alt="SCANLogic™" class="logo-img"></a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
@@ -273,7 +267,7 @@ footer{background:#03111e;padding:32px 80px;display:flex;align-items:center;just
 
 <!-- HERO -->
 <div class="hero">
-  <img src="https://cdn.katalyst-crm.com/t1/cloudinary/judy_mcfarlen_hero_wxxutn.png" alt="Dr. Judy McFarlen" class="hero-photo">
+  <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1775549216/judy_mcfarlen_hero_wxxutn.png" alt="Dr. Judy McFarlen" class="hero-photo">
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <span class="ey ey-lt">Ultrasound Consistency</span>
@@ -281,8 +275,8 @@ footer{background:#03111e;padding:32px 80px;display:flex;align-items:center;just
     <span class="hero-sh">Standardize Your Diagnostic Workflow — Deliver Predictable Veterinary Outcomes</span>
     <p>SCANLogic transforms ultrasound from a clinician-dependent skill into a standardized decision system so utilization stays consistent, diagnostic confidence increases, and your investment finally delivers predictable outcomes.</p>
     <div class="hero-btns">
-      <a href="#contact" class="btn btn-mint">Schedule Consultation</a>
-      <a href="#assessment" class="btn btn-omint">Take Readiness Assessment</a>
+      <a href="#contact" class="btn btn-mint">Apply for a Strategic Consultation</a>
+      <a href="#assessment" class="btn btn-omint">Explore the Framework</a>
     </div>
   </div>
 </div>
@@ -296,7 +290,7 @@ footer{background:#03111e;padding:32px 80px;display:flex;align-items:center;just
       <p class="cred-sub">Built in real clinics. Proven under pressure.</p>
       <p class="cred-close">This work is grounded in volume, longevity, and lived clinical reality. Not theory.</p>
     </div>
-    <img src="https://cdn.katalyst-crm.com/t1/cloudinary/judy_mcfarlen_3_dog_hwcgp0.png" alt="Dr. Judy McFarlen with dog" class="cred-l-img">
+    <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1775571807/judy_mcfarlen_3_dog_hwcgp0.png" alt="Dr. Judy McFarlen with dog" class="cred-l-img">
   </div>
   <div class="cred-r">
     <div class="cred-items">
@@ -313,7 +307,7 @@ footer{background:#03111e;padding:32px 80px;display:flex;align-items:center;just
 
 <!-- STATISTICS -->
 <div class="stats-section">
-  <img src="https://cdn.katalyst-crm.com/t1/cloudinary/judy_mcfarlen_paw_owmxif.png" alt="" class="stats-paw-img" aria-hidden="true">
+  <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1775549977/judy_mcfarlen_paw_owmxif.png" alt="" class="stats-paw-img" aria-hidden="true">
   <div class="stats-inner">
     <div class="stats-hd">
       <span class="ey ey-lt">Impact of systemized ultrasound use</span>
@@ -359,18 +353,15 @@ footer{background:#03111e;padding:32px 80px;display:flex;align-items:center;just
 .stats-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
 .stat-card{background:rgba(10,46,74,.72);backdrop-filter:blur(6px);padding:40px 32px;border-top:2px solid rgba(255,255,255,.1);transition:all .3s ease;border-radius:16px;cursor:default}
 .stat-card:hover{background:rgba(25,116,138,.75);border-top-color:var(--mint);transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,.35)}
-.stat-card-accent{background:rgba(25,116,138,.82);border-top-color:var(--mint)}
-.stat-card-accent:hover{background:rgba(25,116,138,1);transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,.4)}
 .stat-num{font-size:52px;font-weight:800;color:var(--mint);line-height:1;margin-bottom:14px;letter-spacing:-0.03em;transition:color .3s}
-.stat-card-accent .stat-num{color:#fff}
-.stat-card:not(.stat-card-accent):hover .stat-num{color:#fff}
+.stat-card:hover .stat-num{color:#fff}
 .stat-title{font-size:16px;font-weight:600;color:#fff;line-height:1.4;margin-bottom:12px}
 .stat-desc{font-size:15px;font-weight:400;color:rgba(255,255,255,.72);line-height:1.85;transition:color .3s}
 .stat-card:hover .stat-desc{color:rgba(255,255,255,.85)}
 </style>
 
 <!-- SERVICES CAROUSEL -->
-<div class="svc-section">
+<div class="svc-section" id="services">
   <div class="svc-header">
     <div class="svc-header-center">
       <span class="ey" style="color:var(--teal)">Services</span>
@@ -384,60 +375,74 @@ footer{background:#03111e;padding:32px 80px;display:flex;align-items:center;just
     </div>
   </div>
 
+  <div class="svc-controls">
+    <span class="svc-counter"><strong id="svcCur">01</strong>&nbsp;/&nbsp;03</span>
+    <div class="svc-controls-arrows">
+      <button class="svc-arr-btn" id="svcPrevBtn" onclick="svcPrev()" aria-label="Previous phase">&#8592;</button>
+      <button class="svc-arr-btn" id="svcNextBtn" onclick="svcNext()" aria-label="Next phase">&#8594;</button>
+    </div>
+  </div>
+
   <div class="svc-carousel-wrap">
     <div class="svc-track" id="svcTrack">
 
       <!-- Slide 1 -->
       <div class="svc-slide">
-        <div class="svc-img-col">
-          <img src="https://cdn.katalyst-crm.com/t1/cloudinary/judy_mcfarlen_phase_1_iiowrd.png" alt="Phase 1 Assessment" class="svc-photo">
-          <div class="svc-phase-badge">Phase 1</div>
-        </div>
-        <div class="svc-content-col">
-          <span class="svc-phase-tag">Phase 1: Assessment</span>
-          <h3 class="svc-title">Ultrasound Decision System Assessment</h3>
-          <p class="svc-body">Establish baseline clarity on how ultrasound decisions are currently made and supported across your practice.</p>
-          <p class="svc-body">We review how ultrasound informs clinical choices today, map where it should be used versus where it actually is, and identify the highest-leverage breakdown points. You receive a strategic consult session, written readiness report, and optional leadership debrief with prioritized next steps.</p>
-          <div class="svc-callout">
-            <span class="svc-callout-lbl">Best for:</span> Multi-doctor hospitals, medical directors, and practices with equipment and training already in place but inconsistent utilization.
+        <div class="svc-card">
+          <div class="svc-img-col">
+            <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1775550501/judy_mcfarlen_phase_1_iiowrd.png" alt="Phase 1 Assessment" class="svc-photo">
+            <div class="svc-phase-badge">Phase 1</div>
           </div>
-          <a href="#contact" class="btn btn-mint svc-cta">Start With a Strategic Assessment</a>
+          <div class="svc-content-col">
+            <span class="svc-phase-tag">Phase 1: Assessment</span>
+            <h3 class="svc-title">Ultrasound Decision System Assessment</h3>
+            <p class="svc-body">Establish baseline clarity on how ultrasound decisions are currently made and supported across your practice.</p>
+            <p class="svc-body">We review how ultrasound informs clinical choices today, map where it should be used versus where it actually is, and identify the highest-leverage breakdown points. You receive a strategic consult session, written readiness report, and optional leadership debrief with prioritized next steps.</p>
+            <div class="svc-callout">
+              <span class="svc-callout-lbl">Best for:</span> Multi-doctor hospitals, medical directors, and practices with equipment and training already in place but inconsistent utilization.
+            </div>
+            <a href="#contact" class="btn btn-mint svc-cta">Start With a Strategic Assessment</a>
+          </div>
         </div>
       </div>
 
       <!-- Slide 2 -->
       <div class="svc-slide">
-        <div class="svc-img-col">
-          <img src="https://cdn.katalyst-crm.com/t1/cloudinary/judy_mcfarlen_phase_2_ezqhbc.png" alt="Phase 2 Implementation" class="svc-photo">
-          <div class="svc-phase-badge">Phase 2</div>
-        </div>
-        <div class="svc-content-col">
-          <span class="svc-phase-tag">Phase 2: Implementation</span>
-          <h3 class="svc-title">Ultrasound Decision System Implementation</h3>
-          <p class="svc-body">Build and embed standardized decision pathways so ultrasound reliably informs clinical decisions.</p>
-          <p class="svc-body">We develop standardized pathways from scan to interpretation to the next step. We create workflow and scheduling supports that survive real clinic pressure. Delivery includes group training, workshops, and programs in online and live formats.</p>
-          <div class="svc-callout svc-callout-outcome">
-            <span class="svc-callout-lbl">Outcomes:</span> Increased utilization consistency, reduced diagnostic uncertainty, more predictable case flow, and stronger ROI on existing imaging equipment.
+        <div class="svc-card">
+          <div class="svc-img-col">
+            <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1775550502/judy_mcfarlen_phase_2_ezqhbc.png" alt="Phase 2 Implementation" class="svc-photo">
+            <div class="svc-phase-badge">Phase 2</div>
           </div>
-          <a href="#contact" class="btn btn-mint svc-cta">Start With a Strategic Assessment</a>
+          <div class="svc-content-col">
+            <span class="svc-phase-tag">Phase 2: Implementation</span>
+            <h3 class="svc-title">Ultrasound Decision System Implementation</h3>
+            <p class="svc-body">Build and embed standardized decision pathways so ultrasound reliably informs clinical decisions.</p>
+            <p class="svc-body">We develop standardized pathways from scan to interpretation to the next step. We create workflow and scheduling supports that survive real clinic pressure. Delivery includes group training, workshops, and programs in online and live formats.</p>
+            <div class="svc-callout svc-callout-outcome">
+              <span class="svc-callout-lbl">Outcomes:</span> Increased utilization consistency, reduced diagnostic uncertainty, more predictable case flow, and stronger ROI on existing imaging equipment.
+            </div>
+            <a href="#contact" class="btn btn-mint svc-cta">Start With a Strategic Assessment</a>
+          </div>
         </div>
       </div>
 
       <!-- Slide 3 -->
       <div class="svc-slide">
-        <div class="svc-img-col">
-          <img src="https://cdn.katalyst-crm.com/t1/cloudinary/judy_mcfarlen_phase_3_oj9teo.png" alt="Phase 3 Sustained Integration" class="svc-photo">
-          <div class="svc-phase-badge">Phase 3</div>
-        </div>
-        <div class="svc-content-col">
-          <span class="svc-phase-tag">Phase 3: Sustained Integration</span>
-          <h3 class="svc-title">SCANLogic™ Sustained Integration Plan</h3>
-          <p class="svc-body">Keep adoption strong over time, across hiring cycles, and across sites.</p>
-          <p class="svc-body">We implement adoption and reinforcement plans, track usage and decision pathway adherence, conduct quarterly case reviews, and build ongoing onboarding for new hires.</p>
-          <div class="svc-callout svc-callout-outcome">
-            <span class="svc-callout-lbl">Outcomes:</span> Durable standardization without rigidity, stable performance across clinicians and locations, and long-term decision reliability.
+        <div class="svc-card">
+          <div class="svc-img-col">
+            <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1775550502/judy_mcfarlen_phase_3_oj9teo.png" alt="Phase 3 Sustained Integration" class="svc-photo">
+            <div class="svc-phase-badge">Phase 3</div>
           </div>
-          <a href="#contact" class="btn btn-mint svc-cta">Start With a Strategic Assessment</a>
+          <div class="svc-content-col">
+            <span class="svc-phase-tag">Phase 3: Sustained Integration</span>
+            <h3 class="svc-title">SCANLogic™ Sustained Integration Plan</h3>
+            <p class="svc-body">Keep adoption strong over time, across hiring cycles, and across sites.</p>
+            <p class="svc-body">We implement adoption and reinforcement plans, track usage and decision pathway adherence, conduct quarterly case reviews, and build ongoing onboarding for new hires.</p>
+            <div class="svc-callout svc-callout-outcome">
+              <span class="svc-callout-lbl">Outcomes:</span> Durable standardization without rigidity, stable performance across clinicians and locations, and long-term decision reliability.
+            </div>
+            <a href="#contact" class="btn btn-mint svc-cta">Start With a Strategic Assessment</a>
+          </div>
         </div>
       </div>
 
@@ -446,9 +451,9 @@ footer{background:#03111e;padding:32px 80px;display:flex;align-items:center;just
 
   <div class="svc-nav">
     <div class="svc-dots">
-      <span class="svc-dot active" onclick="svcGo(0)"></span>
-      <span class="svc-dot" onclick="svcGo(1)"></span>
-      <span class="svc-dot" onclick="svcGo(2)"></span>
+      <span class="svc-dot active" onclick="svcGo(0)" role="button" tabindex="0" aria-label="Phase 1: Assessment"></span>
+      <span class="svc-dot" onclick="svcGo(1)" role="button" tabindex="0" aria-label="Phase 2: Implementation"></span>
+      <span class="svc-dot" onclick="svcGo(2)" role="button" tabindex="0" aria-label="Phase 3: Sustained Integration"></span>
     </div>
   </div>
 </div>
@@ -467,21 +472,32 @@ footer{background:#03111e;padding:32px 80px;display:flex;align-items:center;just
 .svc-tab.active .svc-tab-phase{color:var(--mint)}
 .svc-tab-name{font-size:17px;font-weight:600;color:var(--navy)}
 .svc-tab.active .svc-tab-name{color:#fff}
-.svc-carousel-wrap{overflow:hidden;padding:0 80px}
+.svc-controls{display:flex;align-items:center;justify-content:space-between;gap:20px;max-width:900px;margin:0 auto;padding:0 24px 22px}
+.svc-controls-arrows{display:flex;gap:10px}
+.svc-counter{font-size:13px;font-weight:600;letter-spacing:.1em;color:var(--gray);font-variant-numeric:tabular-nums}
+.svc-counter strong{color:var(--teal);font-size:16px;font-weight:700}
+.svc-carousel-wrap{overflow:hidden;padding:10px 24px 24px}
 .svc-track{display:flex;transition:transform .45s cubic-bezier(.4,0,.2,1)}
-.svc-slide{min-width:100%;display:grid;grid-template-columns:380px 1fr;background:var(--white);border-radius:16px;overflow:hidden}
-.svc-img-col{position:relative;background:var(--teal-dp);min-height:520px;overflow:hidden}
+.svc-slide{min-width:100%;display:flex;justify-content:center;padding:6px 14px}
+.svc-card{width:100%;max-width:900px;display:grid;grid-template-columns:300px 1fr;background:var(--white);border:1px solid var(--ice-md);border-radius:20px;overflow:hidden;box-shadow:0 18px 48px rgba(10,46,74,.14)}
+.svc-img-col{position:relative;background:var(--teal-dp);min-height:380px;overflow:hidden}
 .svc-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
-.svc-phase-badge{position:absolute;top:32px;left:32px;background:var(--mint);color:var(--navy);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:7px 16px}
-.svc-content-col{padding:64px 80px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
-.svc-phase-tag{font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:16px}
-.svc-title{font-size:38px;font-weight:600;color:var(--navy);line-height:1.1;margin-bottom:26px;letter-spacing:-0.02em}
-.svc-body{font-size:18px;color:var(--gray);line-height:1.9;margin-bottom:18px;font-weight:400;max-width:560px}
-.svc-callout{font-size:17px;color:var(--gray);line-height:1.8;padding:18px 22px;border-left:3px solid var(--teal);background:var(--ice);margin-bottom:28px;font-weight:400;border-radius:4px}
+.svc-phase-badge{position:absolute;top:24px;left:24px;background:var(--mint);color:var(--navy);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:7px 16px;border-radius:6px}
+.svc-content-col{padding:44px 48px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.svc-phase-tag{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:14px}
+.svc-title{font-size:29px;font-weight:600;color:var(--navy);line-height:1.12;margin-bottom:18px;letter-spacing:-0.02em}
+.svc-body{font-size:15px;color:var(--gray);line-height:1.8;margin-bottom:14px;font-weight:400;max-width:none}
+.svc-callout{font-size:14px;color:var(--gray);line-height:1.7;padding:16px 18px;border-left:3px solid var(--teal);background:var(--ice);margin-bottom:24px;font-weight:400;border-radius:4px}
 .svc-callout-outcome{border-left-color:var(--mint);background:rgba(166,245,192,.08)}
 .svc-callout-lbl{font-weight:700;color:var(--navy)}
 .svc-cta{display:inline-block;text-align:center;white-space:nowrap;width:auto}
-.svc-nav{display:flex;align-items:center;justify-content:center;gap:20px;padding:24px 80px 32px;background:transparent}
+.svc-nav{display:flex;align-items:center;justify-content:center;gap:20px;padding:6px 80px 36px;background:transparent}
+@media(max-width:760px){
+  .svc-card{grid-template-columns:1fr;max-width:520px}
+  .svc-img-col{min-height:220px}
+  .svc-content-col{padding:32px 28px}
+  .svc-controls{max-width:520px;padding-bottom:18px}
+}
 .svc-arr-btn{width:40px;height:40px;border:2px solid var(--ice-md);background:var(--white);color:var(--teal);font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;font-family:'Outfit',sans-serif;border-radius:999px}
 .svc-arr-btn:hover:not(:disabled){background:var(--teal);color:#fff;border-color:var(--teal)}
 .svc-arr-btn:disabled{opacity:.3;cursor:default}
@@ -493,16 +509,31 @@ footer{background:#03111e;padding:32px 80px;display:flex;align-items:center;just
 <script>
 (function(){
   var cur=0,total=3;
+  var track=document.getElementById('svcTrack');
+  var tabs=document.querySelectorAll('.svc-tab');
+  var dots=document.querySelectorAll('.svc-dot');
+  var prevBtn=document.getElementById('svcPrevBtn');
+  var nextBtn=document.getElementById('svcNextBtn');
+  var counter=document.getElementById('svcCur');
   function update(){
-    document.getElementById('svcTrack').style.transform='translateX(-'+cur*100+'%)';
-    document.querySelectorAll('.svc-tab').forEach(function(t,i){t.classList.toggle('active',i===cur)});
-    document.querySelectorAll('.svc-dot').forEach(function(d,i){d.classList.toggle('active',i===cur)});
-    
-    
+    if(track){track.style.transform='translateX(-'+(cur*100)+'%)';}
+    tabs.forEach(function(t,i){t.classList.toggle('active',i===cur);});
+    dots.forEach(function(d,i){d.classList.toggle('active',i===cur);});
+    if(prevBtn){prevBtn.disabled=(cur===0);}
+    if(nextBtn){nextBtn.disabled=(cur===total-1);}
+    if(counter){counter.textContent='0'+(cur+1);}
   }
-  window.svcGo=function(n){cur=n;update()};
-  window.svcPrev=function(){if(cur>0){cur--;update()}};
-  window.svcNext=function(){if(cur<total-1){cur++;update()}};
+  window.svcGo=function(n){n=Math.max(0,Math.min(total-1,n));cur=n;update();};
+  window.svcPrev=function(){if(cur>0){cur--;update();}};
+  window.svcNext=function(){if(cur<total-1){cur++;update();}};
+  // arrow-key navigation when the carousel is in view
+  document.addEventListener('keydown',function(e){
+    if(e.key==='ArrowLeft'){window.svcPrev();}
+    else if(e.key==='ArrowRight'){window.svcNext();}
+  });
+  // let dots respond to Enter/Space for keyboard users
+  dots.forEach(function(d,i){d.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();window.svcGo(i);}});});
+  update();
 })();
 </script>
 
@@ -545,8 +576,6 @@ footer{background:#03111e;padding:32px 80px;display:flex;align-items:center;just
   </div>
 
   <div class="prob-close">
-    <img src="https://cdn.katalyst-crm.com/t1/cloudinary/dog_comox_lake_LE_upscale_prime_1_fscvub.png" alt="" class="prob-close-bg" aria-hidden="true">
-    <div class="prob-close-overlay"></div>
     <div class="prob-close-content">
       <p class="prob-pivot">Most practices assume this variability is unavoidable. It isn't.</p>
       <p class="prob-pivot-body">It's the predictable outcome of training individuals without building systems that support them.</p>
@@ -570,7 +599,7 @@ footer{background:#03111e;padding:32px 80px;display:flex;align-items:center;just
 .prob-list li{font-size:17px;color:var(--navy);line-height:1.75;padding:14px 0;border-bottom:1px solid var(--ice-md);display:flex;align-items:flex-start;gap:14px;font-weight:400}
 .prob-list li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--teal);flex-shrink:0;margin-top:9px}
 .prob-mid{position:relative;overflow:hidden;background:var(--navy);padding:72px 80px;border-bottom:2px solid rgba(255,255,255,.06)}
-.prob-mid::before{content:'';position:absolute;inset:0;background-image:url('https://cdn.katalyst-crm.com/t1/cloudinary/judy_mcfarlen_paw_owmxif.png');background-size:cover;background-position:center;opacity:0.45;z-index:0}
+.prob-mid::before{content:'';position:absolute;inset:0;background-image:url('https://res.cloudinary.com/dcuswyfur/image/upload/v1775549977/judy_mcfarlen_paw_owmxif.png');background-size:cover;background-position:center;opacity:0.45;z-index:0}
 .prob-mid-hd{position:relative;z-index:1;margin-bottom:40px;text-align:center}
 .prob-risk{font-size:34px;font-weight:600;color:#fff;margin-bottom:14px;line-height:1.3}
 .prob-risk-sub{font-size:22px;color:rgba(255,255,255,.88);font-weight:400}
@@ -580,9 +609,8 @@ footer{background:#03111e;padding:32px 80px;display:flex;align-items:center;just
 .prob-con-icon{font-size:16px;font-weight:700;letter-spacing:.08em;color:var(--mint);flex-shrink:0}
 .prob-con-title{font-size:18px;font-weight:600;color:#fff;margin-bottom:8px;line-height:1.4}
 .prob-con-desc{font-size:16px;color:rgba(255,255,255,.82);line-height:1.85;font-weight:400}
-.prob-close{position:relative;overflow:hidden;min-height:420px;display:flex;align-items:center}
-.prob-close-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0}
-.prob-close-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(255,255,255,0.97) 0%,rgba(255,255,255,0.92) 40%,rgba(255,255,255,0.6) 65%,rgba(255,255,255,0) 100%);z-index:1}
+.prob-close{position:relative;overflow:hidden;min-height:420px;display:flex;align-items:center;background-image:url('https://res.cloudinary.com/dcuswyfur/image/upload/v1780652934/dog_comox_lake_LE_upscale_prime_2_rfetuc.png');background-size:cover;background-position:center;background-repeat:no-repeat}
+@media(max-width:768px){.prob-close{background-image:url('https://res.cloudinary.com/dcuswyfur/image/upload/v1780652934/dog_comox_lake_LE_upscale_prime_1_wfindp.png')}}
 .prob-close-content{position:relative;z-index:2;padding:72px 80px;max-width:820px}
 .prob-pivot{font-size:26px;font-weight:600;color:var(--navy);margin-bottom:20px;line-height:1.1;white-space:nowrap}
 .prob-pivot-body{font-size:18px;color:var(--gray);line-height:1.9;font-weight:400;max-width:680px;margin-bottom:18px}
@@ -645,7 +673,7 @@ footer{background:#03111e;padding:32px 80px;display:flex;align-items:center;just
       </div>
     </div>
     <div class="possible-img-col">
-      <img src="https://cdn.katalyst-crm.com/t1/cloudinary/judy_mcfarlen_4_wlpubv.png" alt="Dr. Judy McFarlen" class="possible-img">
+      <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1775566456/judy_mcfarlen_4_wlpubv.png" alt="Dr. Judy McFarlen" class="possible-img">
     </div>
   </div>
 </div>
@@ -657,7 +685,7 @@ footer{background:#03111e;padding:32px 80px;display:flex;align-items:center;just
     <h2>From Reactive Scanning to<br><span class="it-mn">Reliable Decision Architecture</span></h2>
     <p class="diff-body">SCANLogic™ doesn't teach clinicians to collect better images. It builds the structural supports that make ultrasound decisions consistent, defensible, and sustainable across your entire practice.</p>
     <p class="diff-close">This is not another training program. It's the system that makes training stick, and what consistency looks like when it's designed, not hoped for.</p>
-    <a href="#framework" class="btn btn-omint" style="margin-top:32px;display:inline-block">Explore the SCANLogic™ Framework</a>
+    <a href="#assessment" class="btn btn-omint" style="margin-top:32px;display:inline-block;white-space:normal;text-transform:none;max-width:440px;line-height:1.55;text-align:left;letter-spacing:.01em">Learn what is preventing optimal ultrasound utilization in your organization in just 2 minutes! Take the quiz.</a>
   </div>
   <div class="diff-r">
     <div class="diff-item">
@@ -694,26 +722,70 @@ footer{background:#03111e;padding:32px 80px;display:flex;align-items:center;just
       <div class="testi-track" id="testiTrack">
         <div class="t-blk t-blk-1">
           <div class="t-q">"</div>
-          <div class="t-txt">Dr. McFarlen doesn't just teach ultrasound. She teaches you how to think with it.</div>
+          <div class="t-txt">Dr. Judy is an excellent teacher—she built our scanning skills, explained pathology clearly, and helped us optimize our ultrasound workflow and settings for cardiac studies. She meets teams where they are and elevates both confidence and consistency.</div>
           <div class="t-attr">
-            <div class="t-avatar t-av-1">MD</div>
-            <div><div class="t-name">Medical Director</div><div class="t-role">Multi-Location Veterinary Group</div></div>
+            <div class="t-avatar t-av-1">NB</div>
+            <div><div class="t-name">Dr. Nathan Bernadet</div><div class="t-role">Practice Owner · AB</div></div>
           </div>
         </div>
         <div class="t-blk t-blk-2">
           <div class="t-q">"</div>
-          <div class="t-txt">Our utilization used to drop every time our strongest scanner was off. Now it's consistent across the team.</div>
+          <div class="t-txt">Dr. McFarlen doesn't just teach ultrasound—she teaches you how to think with it.</div>
+        </div>
+        <div class="t-blk t-blk-3">
+          <div class="t-q">"</div>
+          <div class="t-txt">We came to rely on her for sound medical advice in our most difficult and challenging cases.</div>
           <div class="t-attr">
-            <div class="t-avatar t-av-2">PO</div>
-            <div><div class="t-name">Practice Owner</div><div class="t-role">Independent Hospital</div></div>
+            <div class="t-avatar t-av-3">TG</div>
+            <div><div class="t-name">Dr. Tim Goodbrand</div><div class="t-role">Multi-Location Practice Owner · AB</div></div>
+          </div>
+        </div>
+        <div class="t-blk t-blk-1">
+          <div class="t-q">"</div>
+          <div class="t-txt">Her guidance helped me build confidence, think more clearly through complex cases, and stay grounded in practical clinical decision-making.</div>
+          <div class="t-attr">
+            <div class="t-avatar t-av-1">AD</div>
+            <div><div class="t-name">Dr. Alecia Ducharme</div><div class="t-role">Associate Veterinarian · IL</div></div>
+          </div>
+        </div>
+        <div class="t-blk t-blk-2">
+          <div class="t-q">"</div>
+          <div class="t-txt">She translated the scan into a clear plan for the pet.</div>
+          <div class="t-attr">
+            <div class="t-avatar t-av-2">NN</div>
+            <div><div class="t-name">Nicole Newburn, RVT</div><div class="t-role">Technician in Practice</div></div>
           </div>
         </div>
         <div class="t-blk t-blk-3">
           <div class="t-q">"</div>
-          <div class="t-txt">She helped us see that our problem wasn't training. It was that we hadn't built a system that could survive a busy Tuesday.</div>
+          <div class="t-txt">Even working with her briefly gave me more confidence to take on challenging medicine cases.</div>
           <div class="t-attr">
-            <div class="t-avatar t-av-3">AV</div>
-            <div><div class="t-name">Associate Veterinarian</div><div class="t-role">Emergency &amp; Specialty Practice</div></div>
+            <div class="t-avatar t-av-3">AW</div>
+            <div><div class="t-name">Dr. Ashley Wilson Van Duin</div><div class="t-role">Associate Veterinarian · New Zealand</div></div>
+          </div>
+        </div>
+        <div class="t-blk t-blk-1">
+          <div class="t-q">"</div>
+          <div class="t-txt">Dr. Judy has an exceptional ability to assess complicated cases and identify the next right step. Over many years, we trusted her clinical judgment so deeply that our veterinarians in the United States and Europe consulted with her on difficult cases. Her instincts and reasoning were consistently sound.</div>
+          <div class="t-attr">
+            <div class="t-avatar t-av-1">MM</div>
+            <div><div class="t-name">Monika and Matt M.</div><div class="t-role">Pet Owners · IL</div></div>
+          </div>
+        </div>
+        <div class="t-blk t-blk-2">
+          <div class="t-q">"</div>
+          <div class="t-txt">Dr. Judy combines deep expertise with a practical, down-to-earth approach. She was always accessible, clear in her advice, and deeply committed to the well-being of pets. Her knowledge, availability, and genuine care made her someone we trusted completely.</div>
+          <div class="t-attr">
+            <div class="t-avatar t-av-2">JB</div>
+            <div><div class="t-name">Joanne / Jim B.</div><div class="t-role">Pet Owners · AZ</div></div>
+          </div>
+        </div>
+        <div class="t-blk t-blk-3">
+          <div class="t-q">"</div>
+          <div class="t-txt">Dr. Judy cares for pets with extraordinary dedication, skill, and compassion. From emergency surgery to end-of-life care, she supported both the animal and the family with clarity and kindness. Her love of animals shows in the effort she puts into every case.</div>
+          <div class="t-attr">
+            <div class="t-avatar t-av-3">MF</div>
+            <div><div class="t-name">Michelle F.</div><div class="t-role">Pet Owner · AB</div></div>
           </div>
         </div>
       </div>
@@ -726,6 +798,12 @@ footer{background:#03111e;padding:32px 80px;display:flex;align-items:center;just
     <span class="testi-dot active" onclick="testiGo(0)"></span>
     <span class="testi-dot" onclick="testiGo(1)"></span>
     <span class="testi-dot" onclick="testiGo(2)"></span>
+    <span class="testi-dot" onclick="testiGo(3)"></span>
+    <span class="testi-dot" onclick="testiGo(4)"></span>
+    <span class="testi-dot" onclick="testiGo(5)"></span>
+    <span class="testi-dot" onclick="testiGo(6)"></span>
+    <span class="testi-dot" onclick="testiGo(7)"></span>
+    <span class="testi-dot" onclick="testiGo(8)"></span>
   </div>
 
   <div class="testi-footer">
@@ -736,7 +814,7 @@ footer{background:#03111e;padding:32px 80px;display:flex;align-items:center;just
 
 <script>
 (function(){
-  var cur=0,total=3;
+  var cur=0,total=9;
   function testiUpdate(){
     document.getElementById('testiTrack').style.transform='translateX(-'+cur*100+'%)';
     document.querySelectorAll('.testi-dot').forEach(function(d,i){d.classList.toggle('active',i===cur)});
@@ -795,14 +873,14 @@ footer{background:#03111e;padding:32px 80px;display:flex;align-items:center;just
     <a href="#contact" class="btn btn-mint" style="margin-top:28px;display:inline-block;max-width:260px;text-align:center">Work With Dr. McFarlen</a>
   </div>
   <div class="about-r" style="display:flex;align-items:flex-end;justify-content:center;background:transparent">
-    <img src="https://cdn.katalyst-crm.com/t1/cloudinary/judy_mcfarlen_about_nxcbrx.png" alt="Dr. Judy McFarlen" style="width:100%;height:auto;object-fit:contain;object-position:bottom center;display:block;border-radius:20px">
+    <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1775549215/judy_mcfarlen_about_nxcbrx.png" alt="Dr. Judy McFarlen" style="width:100%;height:auto;object-fit:contain;object-position:bottom center;display:block;border-radius:20px">
   </div>
 </div>
 
 <!-- Mission / Vision light section -->
 <div class="mv-section">
   <div class="mv-img-col">
-    <img src="https://cdn.katalyst-crm.com/t1/cloudinary/judy_mcfarlen_6_yqkh7e.png" alt="Dr. Judy McFarlen" class="mv-real-img">
+    <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1775573822/judy_mcfarlen_6_yqkh7e.png" alt="Dr. Judy McFarlen" class="mv-real-img">
   </div>
   <div class="mv-content">
     <div class="mv-blocks-row">
@@ -834,7 +912,7 @@ footer{background:#03111e;padding:32px 80px;display:flex;align-items:center;just
 <!-- FREE RESOURCE -->
 <div class="resource-card-wrap">
   <div class="resource-card">
-    <img src="https://cdn.katalyst-crm.com/t1/cloudinary/judy_mcfarlen_3_pej3a2.png" alt="" class="resource-bg-img" aria-hidden="true">
+    <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1775569992/judy_mcfarlen_3_pej3a2.png" alt="" class="resource-bg-img" aria-hidden="true">
     <div class="resource-card-overlay"></div>
     <div class="resource-card-l">
       <span class="ey ey-lt">Complimentary 4-Domain Readiness Assessment</span>
@@ -850,15 +928,15 @@ footer{background:#03111e;padding:32px 80px;display:flex;align-items:center;just
 
 <!-- FINAL CTA -->
 <div class="final" id="contact">
-  <img src="https://cdn.katalyst-crm.com/t1/cloudinary/funny-golden-retriever-flowering-field_1_tabtev.png" alt="" class="final-bg-img" aria-hidden="true">
+  <img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1776335135/funny-golden-retriever-flowering-field_1_tabtev.png" alt="" class="final-bg-img" aria-hidden="true">
   <div class="final-bg-overlay"></div>
   <span class="ey ey-mn" style="display:block;text-align:center;margin-bottom:16px;position:relative;z-index:2">Ready to build reliable ultrasound decisions?</span>
   <h2 style="position:relative;z-index:2">Stop Compensating for <span>Fragile Systems.</span><br>Start Building Structure <span>That Scales.</span></h2>
   <p style="position:relative;z-index:2">Ultrasound equipment is no longer the limiting factor. Training programs are widely available. Yet variability persists because individual competence doesn't create organizational consistency.</p>
   <p style="position:relative;z-index:2">The work you've already invested in equipment and training can finally deliver predictable outcomes — but only if the system supports it.</p>
   <div class="final-btns" style="position:relative;z-index:2">
-    <a href="#" class="btn btn-mint">Schedule Your Strategic Consultation Now</a>
-    <a href="#assessment" class="btn btn-omint">Take the 4-Domain Readiness Assessment</a>
+    <a href="#" class="btn btn-mint">Apply for a Strategic Consultation</a>
+    <a href="#assessment" class="btn btn-omint">See Where Variability Is Costing Your Practice</a>
   </div>
   <div class="final-contact" style="position:relative;z-index:2"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6e180b1a041b0a172e06011a030f0702400d0103">[email&#160;protected]</a> &nbsp;·&nbsp; +1 780 806 6054</div>
 </div>
@@ -884,7 +962,7 @@ footer{background:#03111e;padding:32px 80px;display:flex;align-items:center;just
 
 /* DIFF */
 .diff-section{display:grid;grid-template-columns:1fr 1fr;background:var(--navy);position:relative;overflow:hidden}
-.diff-section::before{content:'';position:absolute;inset:0;background-image:url('https://cdn.katalyst-crm.com/t1/cloudinary/judy_mcfarlen_paw_owmxif.png');background-size:cover;background-position:center;opacity:0.45;z-index:0}
+.diff-section::before{content:'';position:absolute;inset:0;background-image:url('https://res.cloudinary.com/dcuswyfur/image/upload/v1775549977/judy_mcfarlen_paw_owmxif.png');background-size:cover;background-position:center;opacity:0.45;z-index:0}
 .diff-l{padding:84px 80px;border-right:1px solid rgba(255,255,255,.07);position:relative;z-index:1}
 .diff-l h2{font-size:48px;color:#fff;margin-bottom:24px}
 .diff-body{font-size:18px;color:rgba(255,255,255,.82);line-height:1.9;margin-bottom:20px;font-weight:400;max-width:480px}
@@ -950,9 +1028,304 @@ footer{background:#03111e;padding:32px 80px;display:flex;align-items:center;just
 
 <!-- FOOTER -->
 <footer>
-  <div class="ft-logo"><img src="https://cdn.katalyst-crm.com/t1/cloudinary/logo_scan_logic_uieusy.png" alt="SCANLogic™" class="ft-logo-img"></div>
+  <div class="ft-logo"><img src="https://res.cloudinary.com/dcuswyfur/image/upload/v1775546141/logo_scan_logic_uieusy.png" alt="SCANLogic™" class="ft-logo-img"></div>
   <div class="ft-c">Architect of Scalable Ultrasound Decision Systems &nbsp;·&nbsp; vetjudy@hotmail.com &nbsp;·&nbsp; +1 780 806 6054 &nbsp;·&nbsp; © 2026 Dr. Judy McFarlen. All rights reserved.</div>
-  <div class="ft-r">SCANLogic™</div>
+  <div class="ft-r">SCANLogic™<br><a href="https://katek-ai.com" target="_blank" rel="noopener" class="ft-built">built by KATEK</a></div>
 </footer>
+<style>
+/* ============================================================
+   RESPONSIVE / MOBILE OVERRIDES
+   Layered: 1100px → 900px → 640px → 400px
+   ============================================================ */
+
+/* --- Tablet landscape (≤1100px) --- */
+@media (max-width: 1100px) {
+  nav { padding: 0 32px; }
+  .stats-grid { grid-template-columns: repeat(3, 1fr); }
+  .prob-consequences { grid-template-columns: repeat(3, 1fr); }
+  .dom-cards { grid-template-columns: repeat(2, 1fr); padding: 24px 40px 56px; }
+  .out-grid { grid-template-columns: 1fr 1fr; }
+  .blocks { grid-template-columns: 1fr 1fr; }
+  .domains { grid-template-columns: 1fr 1fr; }
+  .dom-big { grid-column: 1 / -1; grid-row: auto; padding: 56px 48px; }
+  .stats-inner { padding: 64px 40px; }
+  .outcomes { padding: 64px 40px; }
+  .testi-hd { padding: 56px 40px 36px; }
+  .testi-footer { padding: 24px 40px 56px; }
+  .about { padding: 56px 32px; gap: 32px; }
+  .pitch-l { padding: 56px 40px; }
+  .pitch-r { padding: 48px 40px; }
+  .pitch { grid-template-columns: 1fr 320px; }
+  .cred-r { padding: 40px; }
+  .cred-l-text { padding: 56px 40px 24px; }
+  .strip-l, .strip-r { padding: 18px 32px; }
+  .res-l { padding: 56px 40px; }
+  .res-r { padding: 56px 32px; }
+  .resource { grid-template-columns: 1fr 360px; }
+  .resource-card-wrap { padding: 40px; }
+  .resource-card-l { padding: 48px 40px; }
+  .final { padding: 72px 32px; }
+  .prob-top-l, .prob-top-r { padding: 56px 40px; }
+  .prob-mid { padding: 56px 40px; }
+  .prob-close-content { padding: 56px 40px; }
+  .diff-l, .diff-r { padding: 56px 40px; }
+  .dom-intro { padding: 56px 40px 40px; }
+  .mv-content { padding: 48px 40px; }
+  .mv-section { grid-template-columns: 360px 1fr; }
+  .possible-section { padding: 56px 6%; }
+  footer { padding: 24px 32px; }
+  .hero-content h1 { font-size: 60px; white-space: normal; }
+}
+
+/* --- Tablet portrait / small tablet (≤900px) --- */
+@media (max-width: 900px) {
+  /* NAV — keep links visible but compact */
+  nav { padding: 0 20px; height: 68px; }
+  .logo-img { height: 42px; }
+  .nav-links { gap: 14px; }
+  .nav-links a { font-size: 12px; letter-spacing: .02em; }
+  .nav-links .cta { padding: 7px 14px; }
+
+  /* HERO */
+  .hero { min-height: 70vh; padding-top: 68px; }
+  .hero-content { padding: 48px 22px; }
+  .hero-content h1 { font-size: 44px; white-space: normal; line-height: 1.05; }
+  .hero-content h1 .sub { font-size: 18px; margin-top: 14px; margin-bottom: 18px; }
+  .hero-sh { font-size: 12px; }
+  .hero-content p { font-size: 15px; line-height: 1.75; }
+
+  /* CREDIBILITY */
+  .cred-wrap { grid-template-columns: 1fr; }
+  .cred-l { border-right: none; border-bottom: 2px solid var(--ice-md); }
+  .cred-l-img { width: 100%; margin: 0; object-position: left bottom; }
+  .cred-l-text { padding: 48px 24px 24px; }
+  .cred-l h2 { font-size: 30px; }
+  .cred-l h2 .it { font-size: 22px; }
+  .cred-sub { font-size: 16px; }
+  .cred-close { font-size: 15px; padding-top: 18px; }
+  .cred-r { padding: 32px 24px; }
+  .ct { font-size: 16px; }
+  .cd { font-size: 15px; }
+
+  /* STRIP */
+  .strip { grid-template-columns: 1fr; }
+  .strip-l { padding: 16px 24px; border-right: none; border-bottom: 1px solid var(--ice-md); flex-wrap: wrap; gap: 14px; }
+  .strip-r { padding: 16px 24px; justify-content: flex-start; flex-wrap: wrap; gap: 18px; }
+
+  /* PITCH */
+  .pitch { grid-template-columns: 1fr; }
+  .pitch-l { padding: 48px 24px; border-right: none; border-bottom: 2px solid var(--ice); }
+  .pitch-l h2 { font-size: 36px; }
+  .pitch-l p { font-size: 14px; }
+  .pitch-r { padding: 40px 24px; }
+  .pitch-r h3 { font-size: 22px; }
+
+  /* BLOCKS */
+  .blocks { grid-template-columns: 1fr; }
+  .blk { padding: 36px 28px; }
+  .blk h3 { font-size: 24px; }
+  .blk-ghost { font-size: 88px; }
+
+  /* STATS */
+  .stats-inner { padding: 56px 22px; }
+  .stats-hd { margin-bottom: 32px; }
+  .stats-hd h2 { font-size: 28px; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .stat-card { padding: 26px 20px; }
+  .stat-num { font-size: 34px; }
+  .stat-title { font-size: 14px; }
+  .stat-desc { font-size: 13px; }
+
+  /* SERVICES carousel (extends earlier 760 media) */
+  .svc-header { padding: 48px 22px 30px; }
+  .svc-header-center h2 { font-size: 26px; white-space: normal; line-height: 1.15; }
+  .svc-intro { font-size: 15px; margin-bottom: 24px; }
+  .svc-tabs { flex-direction: column; gap: 8px; }
+  .svc-tab { max-width: none; padding: 14px 20px; flex-direction: row; justify-content: flex-start; gap: 14px; }
+  .svc-tab-name { font-size: 15px; }
+  .svc-controls { padding: 0 22px 16px; max-width: none; }
+  .svc-carousel-wrap { padding: 8px 14px 18px; }
+  .svc-slide { padding: 4px 4px; }
+  .svc-title { font-size: 22px; margin-bottom: 14px; }
+  .svc-body { font-size: 14px; line-height: 1.7; margin-bottom: 12px; }
+  .svc-callout { font-size: 13px; padding: 14px 16px; margin-bottom: 20px; }
+  .svc-nav { padding: 4px 22px 28px; }
+
+  /* OUTCOMES */
+  .outcomes { padding: 56px 22px; }
+  .out-hd { flex-direction: column; gap: 14px; margin-bottom: 32px; }
+  .out-hd h2 { font-size: 30px; }
+  .out-hd h2 .it { font-size: 24px; }
+  .out-grid { grid-template-columns: 1fr; }
+  .o-feat, .o-mid, .o-right { padding: 32px 24px; }
+
+  /* DOMAINS (sm grid above About) */
+  .domains { grid-template-columns: 1fr; }
+  .dom-big { padding: 48px 24px; grid-column: auto; }
+  .dom-big h2 { font-size: 32px; }
+  .dom-sm { padding: 30px 24px; }
+  .dom-sm h3 { font-size: 18px; }
+
+  /* ABOUT */
+  .about { flex-direction: column; padding: 48px 22px; gap: 28px; align-items: stretch; }
+  .about-l { max-width: none; }
+  .about-l h2 { font-size: 30px; }
+  .about-l h2 .it-mn { font-size: 22px; margin-bottom: 18px; }
+  .about-l p { font-size: 15px; line-height: 1.8; }
+  .about-r { width: auto; }
+  .mission-row { grid-template-columns: 1fr; }
+
+  /* PROBLEM */
+  .prob-top { grid-template-columns: 1fr; }
+  .prob-top-l { padding: 48px 24px 32px; border-right: none; border-bottom: 2px solid var(--ice-md); }
+  .prob-top-l h2 { font-size: 28px; }
+  .prob-lead, .prob-sub, .prob-body { font-size: 15px; }
+  .prob-top-r { padding: 40px 24px; }
+  .prob-list li { font-size: 15px; }
+  .prob-mid { padding: 48px 22px; }
+  .prob-risk { font-size: 22px; }
+  .prob-risk-sub { font-size: 16px; }
+  .prob-consequences { grid-template-columns: 1fr; }
+  .prob-con { padding: 22px 20px; }
+  .prob-con-title { font-size: 17px; }
+  .prob-con-desc { font-size: 14px; }
+  .prob-close { min-height: 360px; }
+  .prob-close-content { padding: 48px 22px; }
+  .prob-pivot { font-size: 22px; white-space: normal; line-height: 1.2; }
+  .prob-pivot-body { font-size: 15px; }
+
+  /* POSSIBLE */
+  .possible-section { padding: 56px 22px; }
+  .possible-two-col { grid-template-columns: 1fr; gap: 28px; }
+  .possible-hd h2 { font-size: 28px; }
+  .possible-img { width: 70%; margin: 0 auto; }
+  .possible-cta-row { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .possible-tagline { white-space: normal; font-size: 16px; }
+
+  /* DIFF */
+  .diff-section { grid-template-columns: 1fr; }
+  .diff-l { padding: 48px 22px; border-right: none; border-bottom: 1px solid rgba(255,255,255,.1); }
+  .diff-l h2 { font-size: 28px; }
+  .diff-body, .diff-close { font-size: 15px; }
+  .diff-r { padding: 32px 22px 48px; }
+  .diff-item { padding: 22px 20px; }
+  .diff-label { font-size: 16px; }
+  .diff-desc { font-size: 15px; }
+
+  /* TESTIMONIALS */
+  .testi-section .testi-hd { padding: 48px 22px 28px; }
+  .testi-hd h2 { font-size: 26px; }
+  .testi-sub { font-size: 15px; }
+  .testi-stage { padding: 0 12px; gap: 8px; }
+  .testi-carousel-wrap { max-width: 100%; }
+  .t-blk { padding: 32px 22px; }
+  .t-q { font-size: 40px; }
+  .t-txt { font-size: 16px; line-height: 1.55; }
+  .testi-arr { width: 36px; height: 36px; font-size: 14px; }
+  .testi-footer { padding: 14px 22px 40px; }
+  .testi-note { font-size: 15px; }
+
+  /* DOMAINS-SECTION (4-Domain readiness cards) */
+  .domains-section .dom-intro { padding: 48px 22px 28px; }
+  .dom-intro h2 { font-size: 24px; }
+  .dom-close { font-size: 15px; }
+  .dom-cards { grid-template-columns: 1fr; padding: 0 22px 48px; gap: 10px; }
+  .dom-card { padding: 28px 22px; }
+  .dom-card h3 { font-size: 17px; }
+
+  /* MV section */
+  .mv-section { grid-template-columns: 1fr; }
+  .mv-content { padding: 40px 22px; }
+  .mv-blocks-row { flex-direction: column; gap: 12px; }
+  .mv-block { padding: 22px 20px; min-width: 0; }
+
+  /* RESOURCE */
+  .resource { grid-template-columns: 1fr; }
+  .res-l { padding: 48px 22px; border-right: none; border-bottom: 1px solid rgba(255,255,255,.14); }
+  .res-l h2 { font-size: 30px; }
+  .res-r { padding: 40px 22px; }
+  .resource-card-wrap { padding: 32px 22px; }
+  .resource-card { background-position: right -80px center; }
+  .resource-card-overlay { background: linear-gradient(to bottom, rgba(10,46,74,.92) 0%, rgba(10,46,74,.92) 100%); }
+  .resource-card-l { padding: 40px 22px; max-width: none; }
+  .resource-card-l h2 { font-size: 24px; }
+  .resource-card-l p { font-size: 14px; }
+
+  /* FINAL */
+  .final { padding: 64px 22px; }
+  .final h2 { font-size: 30px; line-height: 1.15; }
+  .final p { font-size: 15px; }
+
+  /* FOOTER */
+  footer { padding: 24px 22px; flex-direction: column; text-align: center; gap: 14px; justify-content: center; }
+  .ft-c { text-align: center; }
+  .ft-r { text-align: center; }
+  .ft-built { display: inline-block; margin-top: 6px; }
+}
+
+/* --- Phone (≤640px) --- */
+@media (max-width: 640px) {
+  /* NAV — hide secondary links, keep CTA */
+  nav { height: 60px; padding: 0 16px; }
+  .logo-img { height: 36px; }
+  .nav-links li:not(:last-child) { display: none; }
+  .nav-links .cta { padding: 6px 14px; font-size: 11px; }
+
+  /* HERO */
+  .hero { padding-top: 60px; }
+  .hero-content { padding: 40px 18px; }
+  .hero-content h1 { font-size: 34px; }
+  .hero-content h1 .sub { font-size: 16px; }
+  .hero-content p { font-size: 14px; }
+  .hero-btns { flex-direction: column; width: 100%; align-items: stretch; }
+  .hero-btns .btn { width: 100%; padding: 12px 14px; font-size: 12px; }
+
+  /* General button stacking inside hero / pitch / final */
+  .pitch-btns { flex-direction: column; width: 100%; align-items: stretch; }
+  .pitch-btns .btn { width: 100%; }
+  .final-btns { flex-direction: column; width: 100%; max-width: 320px; }
+  .final-btns .btn { width: 100%; padding: 12px 14px; font-size: 12px; line-height: 1.4; white-space: normal; }
+
+  /* STATS — single column */
+  .stats-grid { grid-template-columns: 1fr; }
+  .stat-num { font-size: 38px; }
+
+  /* Smaller eyebrows */
+  .ey { font-size: 11px; padding: 5px 12px; }
+
+  /* OUT */
+  .out-hd h2 { font-size: 24px; }
+  .out-hd h2 .it { font-size: 20px; }
+
+  /* SERVICES arrows smaller */
+  .svc-arr-btn { width: 36px; height: 36px; font-size: 14px; }
+
+  /* DIFF / PROB / POSSIBLE scaled */
+  .diff-l h2 { font-size: 24px; }
+  .prob-top-l h2 { font-size: 24px; }
+  .prob-pivot { font-size: 20px; }
+  .possible-hd h2 { font-size: 24px; }
+  .pitch-l h2 { font-size: 30px; }
+  .cred-l h2 { font-size: 26px; }
+  .cred-l h2 .it { font-size: 20px; }
+  .res-l h2 { font-size: 26px; }
+  .final h2 { font-size: 26px; }
+  .stats-hd h2 { font-size: 24px; }
+  .testi-hd h2 { font-size: 22px; }
+  .about-l h2 { font-size: 26px; }
+  .about-l h2 .it-mn { font-size: 20px; }
+  .dom-big h2 { font-size: 26px; }
+
+  .blk-ghost { font-size: 72px; }
+}
+
+/* --- Tiny phone (≤400px) --- */
+@media (max-width: 400px) {
+  .hero-content h1 { font-size: 30px; }
+  .stats-hd h2, .out-hd h2, .testi-hd h2 { font-size: 22px; }
+  .stat-card { padding: 22px 18px; }
+  .nav-links .cta { padding: 6px 12px; }
+}
+</style>
 </body>
 </html>
